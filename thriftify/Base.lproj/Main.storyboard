@@ -16,7 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thriftify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-JT-B5L" userLabel="Title">
+                                <rect key="frame" x="263" y="148" width="75" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text 1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-sd-cxP">
+                                <rect key="frame" x="252" y="179" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SZu-ca-wFf"/>
+                                    <constraint firstAttribute="width" constant="97" id="jpa-WB-2oJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-Li-oHq">
+                                <rect key="frame" x="252" y="217" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="PcV-gZ-iPh"/>
+                                    <constraint firstAttribute="height" constant="30" id="qGJ-6C-pXP"/>
+                                    <constraint firstAttribute="width" constant="97" id="qhe-qa-zXq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PcV-gZ-iPh"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xNV-JT-B5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="5uE-GQ-ztV"/>
+                            <constraint firstItem="3dR-Li-oHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ORb-p6-H3N"/>
+                            <constraint firstItem="3dR-Li-oHq" firstAttribute="top" secondItem="7Cm-sd-cxP" secondAttribute="bottom" constant="8" id="ZbA-BA-SqJ"/>
+                            <constraint firstItem="xNV-JT-B5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giz-OH-jdt"/>
+                            <constraint firstItem="7Cm-sd-cxP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jkB-dP-JEH"/>
+                            <constraint firstItem="7Cm-sd-cxP" firstAttribute="top" secondItem="xNV-JT-B5L" secondAttribute="bottom" constant="8" id="vFP-rw-YWE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
