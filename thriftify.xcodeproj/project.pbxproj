@@ -15,6 +15,8 @@
 		672C19A51C47D1EF00A9744F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672C19A31C47D1EF00A9744F /* LaunchScreen.storyboard */; };
 		672C19B01C47D1EF00A9744F /* thriftifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19AF1C47D1EF00A9744F /* thriftifyTests.swift */; };
 		672C19BB1C47D1EF00A9744F /* thriftifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19BA1C47D1EF00A9744F /* thriftifyUITests.swift */; };
+		672C19D01C47E19C00A9744F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C19CE1C47E19C00A9744F /* Fabric.framework */; };
+		672C19D11C47E19C00A9744F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C19CF1C47E19C00A9744F /* Crashlytics.framework */; };
 		A2D4C9331AB1D1017D46E83F /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C013C232E25E04958A01624 /* Pods_thriftify.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		672C19B61C47D1EF00A9744F /* thriftifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thriftifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		672C19BA1C47D1EF00A9744F /* thriftifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thriftifyUITests.swift; sourceTree = "<group>"; };
 		672C19BC1C47D1EF00A9744F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672C19CE1C47E19C00A9744F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		672C19CF1C47E19C00A9744F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E0347A90D85F72CF5AA767F3 /* Pods-thriftify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D4C9331AB1D1017D46E83F /* Pods_thriftify.framework in Frameworks */,
+				672C19D11C47E19C00A9744F /* Crashlytics.framework in Frameworks */,
+				672C19D01C47E19C00A9744F /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +184,8 @@
 		E98AB21575D9C51ACF575357 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				672C19CE1C47E19C00A9744F /* Fabric.framework */,
+				672C19CF1C47E19C00A9744F /* Crashlytics.framework */,
 				3C013C232E25E04958A01624 /* Pods_thriftify.framework */,
 			);
 			name = Frameworks;
@@ -205,6 +213,7 @@
 				672C19921C47D1EF00A9744F /* Resources */,
 				37EEF90AB88433E2FABF2064 /* Embed Pods Frameworks */,
 				DA349B853F8C38B7042A7BA7 /* Copy Pods Resources */,
+				672C19CD1C47E15700A9744F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -351,6 +360,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftify/Pods-thriftify-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		672C19CD1C47E15700A9744F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 41a6cbd8378b9bb0c89fd995522b18ff4e7647ab 87b71f3a13645c1943457bb116588ef11964d79cd53350718013efa6fd0817d4";
 		};
 		DA349B853F8C38B7042A7BA7 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -517,6 +539,10 @@
 			baseConfigurationReference = E0347A90D85F72CF5AA767F3 /* Pods-thriftify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = thriftify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vt.thriftify;
@@ -529,6 +555,10 @@
 			baseConfigurationReference = 1531914444355EE6DE29F8D2 /* Pods-thriftify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = thriftify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vt.thriftify;
