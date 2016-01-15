@@ -11,36 +11,7 @@ import Alamofire
 
 class TFServerManager {
     
-    let parseHeaders : [String:String]
-    
     init() {
-        parseHeaders = [
-            "Content-Type": "application/json",
-            "X-Parse-Application-Id": "XDh0czeU4HSzoWCC5R6Bhv8MRuHVQxL4Cvfv9FOQ",
-            "X-Parse-REST-API-Key": "cgH2dajw4usnlR23UT4jOjXqWuhDSwONQQ6WysNg"
-        ]
-    }
-    
-    func getPictures () {
-        
-//        let headers = [
-//            "Content-Type": "application/json",
-//            "X-Parse-Application-Id": "XDh0czeU4HSzoWCC5R6Bhv8MRuHVQxL4Cvfv9FOQ",
-//            "X-Parse-REST-API-Key": "cgH2dajw4usnlR23UT4jOjXqWuhDSwONQQ6WysNg"
-//        ]
-        
-        Alamofire.request(.GET, "https://api.parse.com/1/classes/Transactions", headers: parseHeaders)
-            .responseJSON() {
-                response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-//                print(response.data)     // server data
-//                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-        }
     }
     
     func getTransactions ()
@@ -57,9 +28,7 @@ class TFServerManager {
         }
     }
     
-    
     enum Router: URLRequestConvertible {
-        //Error: Type 'Five100px.Router' does not conform to protocol 'URLRequestConvertible'
         
         static let baseURLString = "https://api.parse.com/1"
         static let consumerKey = "XDh0czeU4HSzoWCC5R6Bhv8MRuHVQxL4Cvfv9FOQ"
