@@ -22,6 +22,7 @@
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TFCategory" inverseName="transactions" inverseEntity="TFCategory" syncable="YES"/>
         <relationship name="currency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TFCurrency" inverseName="transactions" inverseEntity="TFCurrency" syncable="YES"/>
         <relationship name="recipient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TFRecipient" inverseName="transactions" inverseEntity="TFRecipient" syncable="YES"/>
@@ -30,6 +31,6 @@
         <element name="TFCategory" positionX="-621" positionY="-225" width="128" height="88"/>
         <element name="TFCurrency" positionX="-434" positionY="9" width="128" height="103"/>
         <element name="TFRecipient" positionX="-621" positionY="-57" width="128" height="103"/>
-        <element name="TFTransaction" positionX="-263" positionY="-207" width="128" height="148"/>
+        <element name="TFTransaction" positionX="-263" positionY="-207" width="128" height="163"/>
     </elements>
 </model>

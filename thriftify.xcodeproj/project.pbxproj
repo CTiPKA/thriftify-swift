@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		39D2F2B5D4D0403FD3AC2BED /* Pods_thriftifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */; };
 		672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19971C47D1EF00A9744F /* AppDelegate.swift */; };
-		672C199A1C47D1EF00A9744F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19991C47D1EF00A9744F /* ViewController.swift */; };
+		672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */; };
 		672C199D1C47D1EF00A9744F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672C199B1C47D1EF00A9744F /* Main.storyboard */; };
 		672C19A01C47D1EF00A9744F /* thriftify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672C199E1C47D1EF00A9744F /* thriftify.xcdatamodeld */; };
 		672C19A21C47D1EF00A9744F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672C19A11C47D1EF00A9744F /* Assets.xcassets */; };
@@ -27,6 +27,8 @@
 		672C19E11C48463C00A9744F /* TFRecipient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D91C48463C00A9744F /* TFRecipient+CoreDataProperties.swift */; };
 		672C19E21C48463C00A9744F /* TFRecipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19DA1C48463C00A9744F /* TFRecipient.swift */; };
 		672C19E61C48481900A9744F /* TFServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19E51C48481900A9744F /* TFServerManager.swift */; };
+		672C19ED1C4A4E6A00A9744F /* TFCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19EC1C4A4E6A00A9744F /* TFCoreDataManager.swift */; };
+		672C19F31C4C2FFC00A9744F /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */; };
 		A0C3C92296505EBA2B086A30 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */; };
 		C0895E15CDA1CC6E4837BDA3 /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14F87AEC8324D980691E764 /* Pods_thriftify.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +59,7 @@
 		3CE17B6C744A56F23F616FDB /* Pods-thriftifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		672C19941C47D1EF00A9744F /* thriftify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thriftify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672C19971C47D1EF00A9744F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		672C19991C47D1EF00A9744F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTransactionsViewController.swift; sourceTree = "<group>"; };
 		672C199C1C47D1EF00A9744F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		672C199F1C47D1EF00A9744F /* thriftify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = thriftify.xcdatamodel; sourceTree = "<group>"; };
 		672C19A11C47D1EF00A9744F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		672C19D91C48463C00A9744F /* TFRecipient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TFRecipient+CoreDataProperties.swift"; path = "Model/coredata/TFRecipient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		672C19DA1C48463C00A9744F /* TFRecipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFRecipient.swift; path = Model/coredata/TFRecipient.swift; sourceTree = "<group>"; };
 		672C19E51C48481900A9744F /* TFServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFServerManager.swift; path = Model/Managers/TFServerManager.swift; sourceTree = "<group>"; };
+		672C19EC1C4A4E6A00A9744F /* TFCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCoreDataManager.swift; path = Model/Managers/TFCoreDataManager.swift; sourceTree = "<group>"; };
+		672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = Controllers/Transactions/TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14F87AEC8324D980691E764 /* Pods_thriftify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +206,8 @@
 		672C19CA1C47D23700A9744F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				672C19991C47D1EF00A9744F /* ViewController.swift */,
+				672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */,
+				672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				672C19E51C48481900A9744F /* TFServerManager.swift */,
+				672C19EC1C4A4E6A00A9744F /* TFCoreDataManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -539,10 +545,12 @@
 				672C19DB1C48463C00A9744F /* TFTransaction+CoreDataProperties.swift in Sources */,
 				672C19DF1C48463C00A9744F /* TFCategory+CoreDataProperties.swift in Sources */,
 				672C19DC1C48463C00A9744F /* TFTransaction.swift in Sources */,
-				672C199A1C47D1EF00A9744F /* ViewController.swift in Sources */,
+				672C19ED1C4A4E6A00A9744F /* TFCoreDataManager.swift in Sources */,
+				672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */,
 				672C19E61C48481900A9744F /* TFServerManager.swift in Sources */,
 				672C19E21C48463C00A9744F /* TFRecipient.swift in Sources */,
 				672C19DE1C48463C00A9744F /* TFCurrency.swift in Sources */,
+				672C19F31C4C2FFC00A9744F /* TransactionTableViewCell.swift in Sources */,
 				672C19E11C48463C00A9744F /* TFRecipient+CoreDataProperties.swift in Sources */,
 				672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */,
 				672C19DD1C48463C00A9744F /* TFCurrency+CoreDataProperties.swift in Sources */,

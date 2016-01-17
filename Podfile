@@ -8,6 +8,8 @@ target 'thriftify' do
 
     pod 'Alamofire'
     pod 'IQKeyboardManagerSwift'
+    pod 'JSQCoreDataKit'
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 end
 

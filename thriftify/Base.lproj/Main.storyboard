@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Transactions View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="thriftify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TFTransactionsViewController" customModule="thriftify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,46 +19,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thriftify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-JT-B5L" userLabel="Title">
-                                <rect key="frame" x="263" y="148" width="75" height="23"/>
+                                <rect key="frame" x="263" y="28" width="75" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text 1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-sd-cxP">
-                                <rect key="frame" x="252" y="179" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="SZu-ca-wFf"/>
-                                    <constraint firstAttribute="width" constant="97" id="jpa-WB-2oJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-Li-oHq">
-                                <rect key="frame" x="252" y="217" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="PcV-gZ-iPh"/>
-                                    <constraint firstAttribute="height" constant="30" id="qGJ-6C-pXP"/>
-                                    <constraint firstAttribute="width" constant="97" id="qhe-qa-zXq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="PcV-gZ-iPh"/>
-                                    </mask>
-                                </variation>
-                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nse-Ux-wSE" userLabel="Transactions Table View">
+                                <rect key="frame" x="0.0" y="59" width="600" height="541"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Transaction" id="zdo-cG-37b" customClass="TransactionTableViewCell" customModule="thriftify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zdo-cG-37b" id="1kG-Cq-ZIc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Recipient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-WT-3aM">
+                                                    <rect key="frame" x="24" y="11" width="476" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ael-Bt-dxf" userLabel="Amount">
+                                                    <rect key="frame" x="516" y="11" width="60" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cs9-WT-3aM" firstAttribute="leading" secondItem="1kG-Cq-ZIc" secondAttribute="leadingMargin" constant="16" id="3X4-t8-eSN"/>
+                                                <constraint firstItem="ael-Bt-dxf" firstAttribute="leading" secondItem="cs9-WT-3aM" secondAttribute="trailing" constant="16" id="AWs-oS-b4d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ael-Bt-dxf" secondAttribute="trailing" constant="16" id="M6d-RI-Dhy"/>
+                                                <constraint firstItem="ael-Bt-dxf" firstAttribute="centerY" secondItem="1kG-Cq-ZIc" secondAttribute="centerY" id="TCL-ca-8tE"/>
+                                                <constraint firstItem="cs9-WT-3aM" firstAttribute="centerY" secondItem="1kG-Cq-ZIc" secondAttribute="centerY" id="XJA-LP-71i"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="ael-Bt-dxf" id="bEP-Cf-brg"/>
+                                            <outlet property="recepientLabel" destination="cs9-WT-3aM" id="lAm-BC-Bib"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Db8-cb-W0F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T4u-48-EP0"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xNV-JT-B5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="5uE-GQ-ztV"/>
-                            <constraint firstItem="3dR-Li-oHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ORb-p6-H3N"/>
-                            <constraint firstItem="3dR-Li-oHq" firstAttribute="top" secondItem="7Cm-sd-cxP" secondAttribute="bottom" constant="8" id="ZbA-BA-SqJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nse-Ux-wSE" secondAttribute="bottom" id="044-1D-u5L"/>
+                            <constraint firstItem="xNV-JT-B5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5uE-GQ-ztV"/>
+                            <constraint firstAttribute="trailing" secondItem="Nse-Ux-wSE" secondAttribute="trailing" id="AQZ-P6-1DW"/>
+                            <constraint firstItem="Nse-Ux-wSE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OyJ-hB-KHF"/>
                             <constraint firstItem="xNV-JT-B5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giz-OH-jdt"/>
-                            <constraint firstItem="7Cm-sd-cxP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jkB-dP-JEH"/>
-                            <constraint firstItem="7Cm-sd-cxP" firstAttribute="top" secondItem="xNV-JT-B5L" secondAttribute="bottom" constant="8" id="vFP-rw-YWE"/>
+                            <constraint firstItem="Nse-Ux-wSE" firstAttribute="top" secondItem="xNV-JT-B5L" secondAttribute="bottom" constant="8" id="qRK-jf-lVS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nse-Ux-wSE" id="aUU-ml-DrV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

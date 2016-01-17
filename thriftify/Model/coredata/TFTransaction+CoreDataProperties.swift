@@ -2,7 +2,7 @@
 //  TFTransaction+CoreDataProperties.swift
 //  
 //
-//  Created by Vadim Trulyaev on 1/15/16.
+//  Created by Vadim Trulyaev on 1/17/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -18,6 +18,7 @@ extension TFTransaction {
     @NSManaged var comment: String?
     @NSManaged var date: NSDate?
     @NSManaged var descriptionText: String?
+    @NSManaged var id: NSNumber?
     @NSManaged var category: TFCategory?
     @NSManaged var currency: TFCurrency?
     @NSManaged var recipient: TFRecipient?

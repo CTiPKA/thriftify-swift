@@ -7,11 +7,38 @@
 //
 
 import UIKit
+
 import Alamofire
+import SwiftyJSON
+import JSQCoreDataKit
 
 class TFServerManager {
     
+    var stack : CoreDataStack!
+    
     init() {
+        // Initialize the Core Data model, this class encapsulates the notion of a .xcdatamodeld file
+        // The name passed here should be the name of an .xcdatamodeld file
+        let model = CoreDataModel(name: modelName, bundle: modelBundle)
+        
+        // Initialize a stack with a factory
+        let factory = CoreDataStackFactory(model: model)
+        
+        factory.createStackInBackground { (result: CoreDataStackResult) in
+            switch result {
+            case .Success(let s):
+                self.stack = s
+                print ("TFServerManager stack assigned")
+                
+            case .Failure(let e):
+                print("Error: \(e)")
+            }
+        }
+        
+        if model.needsMigration {
+            // do migration
+        }
+        
     }
     
     func getTransactions ()
@@ -19,11 +46,23 @@ class TFServerManager {
         Alamofire.request(TFServerManager.Router.TransactionListFull)
             .responseJSON () {
                 response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
+//                print(response.request)  // original URL request
+//                print(response.response) // URL response
                 
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+//                        print("JSON: \(json)")
+                        
+                        self.stack.mainContext.performBlockAndWait {
+                            print (json[0]["results"][0])
+                            TFTransaction.newTransaction(self.stack.mainContext, jsonData: json[0]["results"][0])
+                            saveContext(self.stack.mainContext)
+                        }
+                    }
+                case .Failure(let error):
+                    print(error)
                 }
         }
     }

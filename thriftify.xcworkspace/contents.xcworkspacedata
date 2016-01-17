@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:thriftify/Model/coredata/TFTransaction+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:thriftify.xcodeproj">
    </FileRef>
    <FileRef
