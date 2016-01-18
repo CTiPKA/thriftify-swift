@@ -8,14 +8,16 @@
 
 import Foundation
 import CoreData
+
 import SwiftyJSON
+import JSQCoreDataKit
 
 class TFTransaction: NSManagedObject {
     
     static let entityName = "TFTransaction"
     
     init(context: NSManagedObjectContext,
-        id: NSNumber,
+        identifier: String,
         amount: NSNumber,
         comment: String,
         date: NSDate?,
@@ -27,7 +29,7 @@ class TFTransaction: NSManagedObject {
         let entity = NSEntityDescription.entityForName(TFTransaction.entityName, inManagedObjectContext: context)!
         super.init(entity:entity, insertIntoManagedObjectContext: context)
         
-        self.id = id
+        self.identifier = identifier
         self.amount = amount
         self.comment = comment
         self.date = date
@@ -35,7 +37,23 @@ class TFTransaction: NSManagedObject {
         self.category = category
         self.currency = currency
         self.recipient = recipient
+    }
+    
+    class func objectWithId(context:NSManagedObjectContext, id:String) -> TFTransaction? {
+        let entity = NSEntityDescription.entityForName(TFTransaction.entityName, inManagedObjectContext: context)!
+        let request = FetchRequest<TFTransaction>(entity: entity)
+        request.predicate = NSPredicate.init(format: "identifier == \"\(id)\"", argumentArray: nil)
         
+        var results = [TFTransaction]()
+        do {
+            results = try fetch(request: request, inContext: context)
+        }
+        catch {
+            print("Fetch error: \(error)")
+        }
+        
+        print("Fetch results = \(results)")
+        return results.first
     }
     
     class func newTransactions (context:NSManagedObjectContext, jsonData:JSON) {
@@ -45,17 +63,32 @@ class TFTransaction: NSManagedObject {
         }
     }
     
-    class func newTransaction (context:NSManagedObjectContext, jsonData:JSON) -> TFTransaction {
+    class func newTransaction (context:NSManagedObjectContext, jsonData:JSON) -> TFTransaction? {
         
-        return TFTransaction (context: context,
-            id: jsonData["objectId"].doubleValue,
-            amount: jsonData["amount"].doubleValue,
-            comment: jsonData["comment"].stringValue,
-            date: NSDateFormatter().dateFromString(jsonData["transactionDate"].stringValue),
-            descriptionText: jsonData["description"].stringValue,
-            category: nil,
-            currency: nil,
-            recipient: nil)
+        if let transaction = TFTransaction.objectWithId(context, id: jsonData["objectId"].stringValue) {
+            //updating values
+            transaction.identifier = jsonData["objectId"].stringValue
+            transaction.amount = jsonData["amount"].doubleValue
+            transaction.comment = jsonData["comment"].stringValue
+            transaction.date = NSDateFormatter().dateFromString(jsonData["transactionDate"].stringValue)
+            transaction.descriptionText = jsonData["description"].stringValue
+            transaction.category = nil
+            transaction.currency = nil
+            transaction.recipient = nil
+            
+            return transaction
+        } else {
+            //initialize new object
+            return TFTransaction (context: context,
+                identifier: jsonData["objectId"].stringValue,
+                amount: jsonData["amount"].doubleValue,
+                comment: jsonData["comment"].stringValue,
+                date: NSDateFormatter().dateFromString(jsonData["transactionDate"].stringValue),
+                descriptionText: jsonData["description"].stringValue,
+                category: nil,
+                currency: nil,
+                recipient: nil)
+        }
     }
   
     @objc
