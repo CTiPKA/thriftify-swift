@@ -53,11 +53,10 @@ class TFServerManager {
                 case .Success:
                     if let value = response.result.value {
                         let json = JSON(value)
-//                        print("JSON: \(json)")
+                        print("JSON: \(json)")
                         
                         self.stack.mainContext.performBlockAndWait {
-                            print (json[0]["results"][0])
-                            TFTransaction.newTransaction(self.stack.mainContext, jsonData: json[0]["results"][0])
+                            TFTransaction.newTransactions(self.stack.mainContext, jsonData: json["results"])
                             saveContext(self.stack.mainContext)
                         }
                     }

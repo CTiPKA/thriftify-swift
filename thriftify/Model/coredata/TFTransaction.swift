@@ -38,6 +38,13 @@ class TFTransaction: NSManagedObject {
         
     }
     
+    class func newTransactions (context:NSManagedObjectContext, jsonData:JSON) {
+        for (index,subJson):(String, JSON) in jsonData {
+            print("index (\(index)): \(subJson)")
+            TFTransaction.newTransaction(context, jsonData: subJson)
+        }
+    }
+    
     class func newTransaction (context:NSManagedObjectContext, jsonData:JSON) -> TFTransaction {
         
         return TFTransaction (context: context,
