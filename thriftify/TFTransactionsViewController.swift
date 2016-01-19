@@ -9,13 +9,13 @@
 import UIKit
 import CoreData
 
-import JSQCoreDataKit
+import AlecrimCoreData
 
 class TFTransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var stack: CoreDataStack!
+    let dataContext = DataContext()
     
     var transactions = [TFTransaction]()
     var frc: NSFetchedResultsController?
@@ -27,21 +27,23 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
         
         showSpinner()
         
-        let model = CoreDataModel(name: modelName, bundle: modelBundle)
-        let factory = CoreDataStackFactory(model: model)
+        setupFRC()
         
-        factory.createStackInBackground { (result: CoreDataStackResult) -> Void in
-            switch result {
-            case .Success(let s):
-                self.stack = s
-                self.setupFRC()
-                
-            case .Failure(let err):
-                assertionFailure("Error creating stack: \(err)")
-            }
-            
-            self.hideSpinner()
-        }
+//        let model = CoreDataModel(name: modelName, bundle: modelBundle)
+//        let factory = CoreDataStackFactory(model: model)
+//        
+//        factory.createStackInBackground { (result: CoreDataStackResult) -> Void in
+//            switch result {
+//            case .Success(let s):
+//                self.stack = s
+//                self.setupFRC()
+//                
+//            case .Failure(let err):
+//                assertionFailure("Error creating stack: \(err)")
+//            }
+    
+//            self.hideSpinner()
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,18 +53,20 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
 
     // MARK: Helpers
     
-    func fetchRequest(context: NSManagedObjectContext) -> FetchRequest<TFTransaction> {
-        let e = entity(name: TFTransaction.entityName, context: context)
-        let fetch = FetchRequest<TFTransaction>(entity: e)
-        fetch.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
-        return fetch
+    func fetchRequest() -> NSFetchRequest {
+        let request = NSFetchRequest.init(entityName: TFTransaction.entityName)
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        return request
     }
     
     func setupFRC() {
-        let request = fetchRequest(self.stack.mainContext)
+        let request = fetchRequest()
+        
+        let transactions = dataContext.tftransactions
+        print("transactions count: \(transactions.count())")
         
         self.frc = NSFetchedResultsController(fetchRequest: request,
-            managedObjectContext: self.stack.mainContext,
+            managedObjectContext: self.dataContext,
             sectionNameKeyPath: nil,
             cacheName: nil)
         
@@ -105,7 +109,7 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
         if let transactionCell = cell as? TransactionTableViewCell {
         
         transactionCell.recepientLabel?.text = transaction.descriptionText
-        transactionCell.amountLabel?.text = transaction.amount?.stringValue
+        transactionCell.amountLabel?.text = NSNumber.init(double: transaction.amount).stringValue
         }
     }
     

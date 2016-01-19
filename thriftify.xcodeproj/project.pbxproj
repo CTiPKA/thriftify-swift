@@ -18,17 +18,16 @@
 		672C19BB1C47D1EF00A9744F /* thriftifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19BA1C47D1EF00A9744F /* thriftifyUITests.swift */; };
 		672C19D01C47E19C00A9744F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C19CE1C47E19C00A9744F /* Fabric.framework */; };
 		672C19D11C47E19C00A9744F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C19CF1C47E19C00A9744F /* Crashlytics.framework */; };
-		672C19DB1C48463C00A9744F /* TFTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D31C48463C00A9744F /* TFTransaction+CoreDataProperties.swift */; };
-		672C19DC1C48463C00A9744F /* TFTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D41C48463C00A9744F /* TFTransaction.swift */; };
-		672C19DD1C48463C00A9744F /* TFCurrency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D51C48463C00A9744F /* TFCurrency+CoreDataProperties.swift */; };
-		672C19DE1C48463C00A9744F /* TFCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D61C48463C00A9744F /* TFCurrency.swift */; };
-		672C19DF1C48463C00A9744F /* TFCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D71C48463C00A9744F /* TFCategory+CoreDataProperties.swift */; };
-		672C19E01C48463C00A9744F /* TFCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D81C48463C00A9744F /* TFCategory.swift */; };
-		672C19E11C48463C00A9744F /* TFRecipient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19D91C48463C00A9744F /* TFRecipient+CoreDataProperties.swift */; };
-		672C19E21C48463C00A9744F /* TFRecipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19DA1C48463C00A9744F /* TFRecipient.swift */; };
 		672C19E61C48481900A9744F /* TFServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19E51C48481900A9744F /* TFServerManager.swift */; };
-		672C19ED1C4A4E6A00A9744F /* TFCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19EC1C4A4E6A00A9744F /* TFCoreDataManager.swift */; };
 		672C19F31C4C2FFC00A9744F /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */; };
+		672C19FD1C4ED28400A9744F /* TFCategory.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F51C4ED28400A9744F /* TFCategory.generated.swift */; };
+		672C19FE1C4ED28400A9744F /* TFCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F61C4ED28400A9744F /* TFCategory.swift */; };
+		672C19FF1C4ED28400A9744F /* TFCurrency.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F71C4ED28400A9744F /* TFCurrency.generated.swift */; };
+		672C1A001C4ED28400A9744F /* TFCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F81C4ED28400A9744F /* TFCurrency.swift */; };
+		672C1A011C4ED28400A9744F /* TFRecipient.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19F91C4ED28400A9744F /* TFRecipient.generated.swift */; };
+		672C1A021C4ED28400A9744F /* TFRecipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19FA1C4ED28400A9744F /* TFRecipient.swift */; };
+		672C1A031C4ED28400A9744F /* TFTransaction.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19FB1C4ED28400A9744F /* TFTransaction.generated.swift */; };
+		672C1A041C4ED28400A9744F /* TFTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19FC1C4ED28400A9744F /* TFTransaction.swift */; };
 		A0C3C92296505EBA2B086A30 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */; };
 		C0895E15CDA1CC6E4837BDA3 /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14F87AEC8324D980691E764 /* Pods_thriftify.framework */; };
 /* End PBXBuildFile section */
@@ -73,17 +72,16 @@
 		672C19BC1C47D1EF00A9744F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		672C19CE1C47E19C00A9744F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		672C19CF1C47E19C00A9744F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		672C19D31C48463C00A9744F /* TFTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TFTransaction+CoreDataProperties.swift"; path = "Model/coredata/TFTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		672C19D41C48463C00A9744F /* TFTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTransaction.swift; path = Model/coredata/TFTransaction.swift; sourceTree = "<group>"; };
-		672C19D51C48463C00A9744F /* TFCurrency+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TFCurrency+CoreDataProperties.swift"; path = "Model/coredata/TFCurrency+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		672C19D61C48463C00A9744F /* TFCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCurrency.swift; path = Model/coredata/TFCurrency.swift; sourceTree = "<group>"; };
-		672C19D71C48463C00A9744F /* TFCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TFCategory+CoreDataProperties.swift"; path = "Model/coredata/TFCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		672C19D81C48463C00A9744F /* TFCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCategory.swift; path = Model/coredata/TFCategory.swift; sourceTree = "<group>"; };
-		672C19D91C48463C00A9744F /* TFRecipient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TFRecipient+CoreDataProperties.swift"; path = "Model/coredata/TFRecipient+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		672C19DA1C48463C00A9744F /* TFRecipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFRecipient.swift; path = Model/coredata/TFRecipient.swift; sourceTree = "<group>"; };
 		672C19E51C48481900A9744F /* TFServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFServerManager.swift; path = Model/Managers/TFServerManager.swift; sourceTree = "<group>"; };
-		672C19EC1C4A4E6A00A9744F /* TFCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCoreDataManager.swift; path = Model/Managers/TFCoreDataManager.swift; sourceTree = "<group>"; };
 		672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = Controllers/Transactions/TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		672C19F51C4ED28400A9744F /* TFCategory.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFCategory.generated.swift; sourceTree = "<group>"; };
+		672C19F61C4ED28400A9744F /* TFCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCategory.swift; path = Model/coredata_ACDGen/TFCategory.swift; sourceTree = "<group>"; };
+		672C19F71C4ED28400A9744F /* TFCurrency.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFCurrency.generated.swift; sourceTree = "<group>"; };
+		672C19F81C4ED28400A9744F /* TFCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCurrency.swift; path = Model/coredata_ACDGen/TFCurrency.swift; sourceTree = "<group>"; };
+		672C19F91C4ED28400A9744F /* TFRecipient.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFRecipient.generated.swift; sourceTree = "<group>"; };
+		672C19FA1C4ED28400A9744F /* TFRecipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFRecipient.swift; path = Model/coredata_ACDGen/TFRecipient.swift; sourceTree = "<group>"; };
+		672C19FB1C4ED28400A9744F /* TFTransaction.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTransaction.generated.swift; sourceTree = "<group>"; };
+		672C19FC1C4ED28400A9744F /* TFTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTransaction.swift; path = Model/coredata_ACDGen/TFTransaction.swift; sourceTree = "<group>"; };
 		6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14F87AEC8324D980691E764 /* Pods_thriftify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				672C199E1C47D1EF00A9744F /* thriftify.xcdatamodeld */,
+				672C19F41C4ED28400A9744F /* coredata_ACDGen */,
 				672C19E41C4846DD00A9744F /* Entities */,
-				672C19E31C48466100A9744F /* Entities + CoreDataProperties */,
 				672C19D21C47E76300A9744F /* Managers */,
 			);
 			name = Model;
@@ -226,31 +224,31 @@
 			isa = PBXGroup;
 			children = (
 				672C19E51C48481900A9744F /* TFServerManager.swift */,
-				672C19EC1C4A4E6A00A9744F /* TFCoreDataManager.swift */,
 			);
 			name = Managers;
-			sourceTree = "<group>";
-		};
-		672C19E31C48466100A9744F /* Entities + CoreDataProperties */ = {
-			isa = PBXGroup;
-			children = (
-				672C19D31C48463C00A9744F /* TFTransaction+CoreDataProperties.swift */,
-				672C19D51C48463C00A9744F /* TFCurrency+CoreDataProperties.swift */,
-				672C19D71C48463C00A9744F /* TFCategory+CoreDataProperties.swift */,
-				672C19D91C48463C00A9744F /* TFRecipient+CoreDataProperties.swift */,
-			);
-			name = "Entities + CoreDataProperties";
 			sourceTree = "<group>";
 		};
 		672C19E41C4846DD00A9744F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				672C19D41C48463C00A9744F /* TFTransaction.swift */,
-				672C19D61C48463C00A9744F /* TFCurrency.swift */,
-				672C19D81C48463C00A9744F /* TFCategory.swift */,
-				672C19DA1C48463C00A9744F /* TFRecipient.swift */,
+				672C19F61C4ED28400A9744F /* TFCategory.swift */,
+				672C19F81C4ED28400A9744F /* TFCurrency.swift */,
+				672C19FA1C4ED28400A9744F /* TFRecipient.swift */,
+				672C19FC1C4ED28400A9744F /* TFTransaction.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		672C19F41C4ED28400A9744F /* coredata_ACDGen */ = {
+			isa = PBXGroup;
+			children = (
+				672C19F51C4ED28400A9744F /* TFCategory.generated.swift */,
+				672C19F71C4ED28400A9744F /* TFCurrency.generated.swift */,
+				672C19F91C4ED28400A9744F /* TFRecipient.generated.swift */,
+				672C19FB1C4ED28400A9744F /* TFTransaction.generated.swift */,
+			);
+			name = coredata_ACDGen;
+			path = Model/coredata_ACDGen;
 			sourceTree = "<group>";
 		};
 		E98AB21575D9C51ACF575357 /* Frameworks */ = {
@@ -542,20 +540,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				672C19DB1C48463C00A9744F /* TFTransaction+CoreDataProperties.swift in Sources */,
-				672C19DF1C48463C00A9744F /* TFCategory+CoreDataProperties.swift in Sources */,
-				672C19DC1C48463C00A9744F /* TFTransaction.swift in Sources */,
-				672C19ED1C4A4E6A00A9744F /* TFCoreDataManager.swift in Sources */,
+				672C19FE1C4ED28400A9744F /* TFCategory.swift in Sources */,
 				672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */,
 				672C19E61C48481900A9744F /* TFServerManager.swift in Sources */,
-				672C19E21C48463C00A9744F /* TFRecipient.swift in Sources */,
-				672C19DE1C48463C00A9744F /* TFCurrency.swift in Sources */,
+				672C1A031C4ED28400A9744F /* TFTransaction.generated.swift in Sources */,
+				672C1A021C4ED28400A9744F /* TFRecipient.swift in Sources */,
+				672C19FD1C4ED28400A9744F /* TFCategory.generated.swift in Sources */,
 				672C19F31C4C2FFC00A9744F /* TransactionTableViewCell.swift in Sources */,
-				672C19E11C48463C00A9744F /* TFRecipient+CoreDataProperties.swift in Sources */,
+				672C1A011C4ED28400A9744F /* TFRecipient.generated.swift in Sources */,
+				672C1A001C4ED28400A9744F /* TFCurrency.swift in Sources */,
+				672C1A041C4ED28400A9744F /* TFTransaction.swift in Sources */,
 				672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */,
-				672C19DD1C48463C00A9744F /* TFCurrency+CoreDataProperties.swift in Sources */,
-				672C19E01C48463C00A9744F /* TFCategory.swift in Sources */,
 				672C19A01C47D1EF00A9744F /* thriftify.xcdatamodeld in Sources */,
+				672C19FF1C4ED28400A9744F /* TFCurrency.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

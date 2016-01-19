@@ -10,35 +10,13 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
-import JSQCoreDataKit
+import AlecrimCoreData
 
 class TFServerManager {
     
-    var stack : CoreDataStack!
+//    let dataContext = DataContext()
     
     init() {
-        // Initialize the Core Data model, this class encapsulates the notion of a .xcdatamodeld file
-        // The name passed here should be the name of an .xcdatamodeld file
-        let model = CoreDataModel(name: modelName, bundle: modelBundle)
-        
-        // Initialize a stack with a factory
-        let factory = CoreDataStackFactory(model: model)
-        
-        factory.createStackInBackground { (result: CoreDataStackResult) in
-            switch result {
-            case .Success(let s):
-                self.stack = s
-                print ("TFServerManager stack assigned")
-                
-            case .Failure(let e):
-                print("Error: \(e)")
-            }
-        }
-        
-        if model.needsMigration {
-            // do migration
-        }
-        
     }
     
     func getTransactions ()
@@ -46,19 +24,14 @@ class TFServerManager {
         Alamofire.request(TFServerManager.Router.TransactionListFull)
             .responseJSON () {
                 response in
-//                print(response.request)  // original URL request
-//                print(response.response) // URL response
                 
                 switch response.result {
                 case .Success:
                     if let value = response.result.value {
                         let json = JSON(value)
-                        print("JSON: \(json)")
+//                        print("JSON: \(json)")
                         
-                        self.stack.mainContext.performBlockAndWait {
-                            TFTransaction.newTransactions(self.stack.mainContext, jsonData: json["results"])
-                            saveContext(self.stack.mainContext)
-                        }
+                        TFTransaction.newTransactions(json["results"])
                     }
                 case .Failure(let error):
                     print(error)
