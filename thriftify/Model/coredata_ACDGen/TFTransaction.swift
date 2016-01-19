@@ -12,8 +12,6 @@ public class TFTransaction: NSManagedObject {
 
     static let entityName = "TFTransaction"
     
-//    let dataContext = DataContext()
-    
     class func objectWithId (identifier:String) -> TFTransaction? {
         let transaction = DataContext().tftransactions.first({ $0.identifier == identifier })
         return transaction

@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				672C199E1C47D1EF00A9744F /* thriftify.xcdatamodeld */,
-				672C19F41C4ED28400A9744F /* coredata_ACDGen */,
+				672C19F41C4ED28400A9744F /* Entities_ACDGen */,
 				672C19E41C4846DD00A9744F /* Entities */,
 				672C19D21C47E76300A9744F /* Managers */,
 			);
@@ -239,7 +239,7 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		672C19F41C4ED28400A9744F /* coredata_ACDGen */ = {
+		672C19F41C4ED28400A9744F /* Entities_ACDGen */ = {
 			isa = PBXGroup;
 			children = (
 				672C19F51C4ED28400A9744F /* TFCategory.generated.swift */,
@@ -247,7 +247,7 @@
 				672C19F91C4ED28400A9744F /* TFRecipient.generated.swift */,
 				672C19FB1C4ED28400A9744F /* TFTransaction.generated.swift */,
 			);
-			name = coredata_ACDGen;
+			name = Entities_ACDGen;
 			path = Model/coredata_ACDGen;
 			sourceTree = "<group>";
 		};
