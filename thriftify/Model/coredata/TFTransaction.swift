@@ -52,13 +52,13 @@ class TFTransaction: NSManagedObject {
             print("Fetch error: \(error)")
         }
         
-        print("Fetch results = \(results)")
+//        print("Fetch results = \(results)")
         return results.first
     }
     
     class func newTransactions (context:NSManagedObjectContext, jsonData:JSON) {
-        for (index,subJson):(String, JSON) in jsonData {
-            print("index (\(index)): \(subJson)")
+        for (_,subJson):(String, JSON) in jsonData {
+//            print("index (\(index)): \(subJson)")
             TFTransaction.newTransaction(context, jsonData: subJson)
         }
     }
