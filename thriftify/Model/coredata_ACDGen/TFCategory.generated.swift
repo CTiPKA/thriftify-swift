@@ -16,10 +16,10 @@ import AlecrimCoreData
 
 extension TFCategory {
 
-    @NSManaged public var identifier: String?
-    @NSManaged public var name: String?
+    @NSManaged public var identifier: NSString?
+    @NSManaged public var name: NSString?
 
-    @NSManaged public var transactions: Set<TFTransaction>
+    @NSManaged public var transactions: NSSet
 
 }
 
@@ -29,8 +29,8 @@ extension TFCategory {
 
     @NSManaged private func addTransactionsObject(object: TFTransaction)
     @NSManaged private func removeTransactionsObject(object: TFTransaction)
-    @NSManaged public func addTransactions(transactions: Set<TFTransaction>)
-    @NSManaged public func removeTransactions(transactions: Set<TFTransaction>)
+    @NSManaged public func addTransactions(transactions: NSSet)
+    @NSManaged public func removeTransactions(transactions: NSSet)
 
     public func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
     public func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
@@ -41,10 +41,10 @@ extension TFCategory {
 
 extension TFCategory {
 
-    public static let identifier = AlecrimCoreData.NullableAttribute<String>("identifier")
-    public static let name = AlecrimCoreData.NullableAttribute<String>("name")
+    public static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
+    public static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
 
-    public static let transactions = AlecrimCoreData.Attribute<Set<TFTransaction>>("transactions")
+    public static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
 
 }
 
@@ -52,10 +52,10 @@ extension TFCategory {
 
 extension AlecrimCoreData.AttributeType where Self.ValueType: TFCategory {
 
-    public var identifier: AlecrimCoreData.NullableAttribute<String> { return AlecrimCoreData.NullableAttribute<String>("identifier", self) }
-    public var name: AlecrimCoreData.NullableAttribute<String> { return AlecrimCoreData.NullableAttribute<String>("name", self) }
+    public var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
+    public var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
 
-    public var transactions: AlecrimCoreData.Attribute<Set<TFTransaction>> { return AlecrimCoreData.Attribute<Set<TFTransaction>>("transactions", self) }
+    public var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
 
 }
 

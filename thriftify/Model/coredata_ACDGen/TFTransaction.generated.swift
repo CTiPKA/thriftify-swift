@@ -16,12 +16,13 @@ import AlecrimCoreData
 
 extension TFTransaction {
 
-    @NSManaged public var amount: Double // cannot mark as optional because Objective-C compatibility issues
-    @NSManaged public var comment: String?
+    @NSManaged public var amount: NSNumber?
+    @NSManaged public var comment: NSString?
     @NSManaged public var date: NSDate?
-    @NSManaged public var descriptionText: String?
-    @NSManaged public var identifier: String?
+    @NSManaged public var descriptionText: NSString?
+    @NSManaged public var identifier: NSString?
 
+    @NSManaged public var card: TFCard?
     @NSManaged public var category: TFCategory?
     @NSManaged public var currency: TFCurrency?
     @NSManaged public var recipient: TFRecipient?
@@ -32,12 +33,13 @@ extension TFTransaction {
 
 extension TFTransaction {
 
-    public static let amount = AlecrimCoreData.NullableAttribute<Double>("amount")
-    public static let comment = AlecrimCoreData.NullableAttribute<String>("comment")
+    public static let amount = AlecrimCoreData.NullableAttribute<NSNumber>("amount")
+    public static let comment = AlecrimCoreData.NullableAttribute<NSString>("comment")
     public static let date = AlecrimCoreData.NullableAttribute<NSDate>("date")
-    public static let descriptionText = AlecrimCoreData.NullableAttribute<String>("descriptionText")
-    public static let identifier = AlecrimCoreData.NullableAttribute<String>("identifier")
+    public static let descriptionText = AlecrimCoreData.NullableAttribute<NSString>("descriptionText")
+    public static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
 
+    public static let card = AlecrimCoreData.NullableAttribute<TFCard>("card")
     public static let category = AlecrimCoreData.NullableAttribute<TFCategory>("category")
     public static let currency = AlecrimCoreData.NullableAttribute<TFCurrency>("currency")
     public static let recipient = AlecrimCoreData.NullableAttribute<TFRecipient>("recipient")
@@ -48,12 +50,13 @@ extension TFTransaction {
 
 extension AlecrimCoreData.AttributeType where Self.ValueType: TFTransaction {
 
-    public var amount: AlecrimCoreData.NullableAttribute<Double> { return AlecrimCoreData.NullableAttribute<Double>("amount", self) }
-    public var comment: AlecrimCoreData.NullableAttribute<String> { return AlecrimCoreData.NullableAttribute<String>("comment", self) }
+    public var amount: AlecrimCoreData.NullableAttribute<NSNumber> { return AlecrimCoreData.NullableAttribute<NSNumber>("amount", self) }
+    public var comment: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("comment", self) }
     public var date: AlecrimCoreData.NullableAttribute<NSDate> { return AlecrimCoreData.NullableAttribute<NSDate>("date", self) }
-    public var descriptionText: AlecrimCoreData.NullableAttribute<String> { return AlecrimCoreData.NullableAttribute<String>("descriptionText", self) }
-    public var identifier: AlecrimCoreData.NullableAttribute<String> { return AlecrimCoreData.NullableAttribute<String>("identifier", self) }
+    public var descriptionText: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("descriptionText", self) }
+    public var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
 
+    public var card: AlecrimCoreData.NullableAttribute<TFCard> { return AlecrimCoreData.NullableAttribute<TFCard>("card", self) }
     public var category: AlecrimCoreData.NullableAttribute<TFCategory> { return AlecrimCoreData.NullableAttribute<TFCategory>("category", self) }
     public var currency: AlecrimCoreData.NullableAttribute<TFCurrency> { return AlecrimCoreData.NullableAttribute<TFCurrency>("currency", self) }
     public var recipient: AlecrimCoreData.NullableAttribute<TFRecipient> { return AlecrimCoreData.NullableAttribute<TFRecipient>("recipient", self) }

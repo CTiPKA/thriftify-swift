@@ -24,8 +24,29 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        populateCards()
+
+    }
+    
+    func populateCards () {
         showSpinner()
         
+        TFServerManager().getCards () {
+            result in
+            
+            switch result {
+            case .Success(let json):
+                TFCoredataManager.newCards(self.dataContext, jsonData: json)
+                self.populateTransactions()
+            case .Failure(_):
+                //error happend
+                self.hideSpinner()
+                break
+            }
+        }
+    }
+    
+    func populateTransactions () {
         TFServerManager().getTransactions() {
             result in
             
@@ -104,9 +125,25 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let transaction = self.frc?.objectAtIndexPath(indexPath) as! TFTransaction
         if let transactionCell = cell as? TransactionTableViewCell {
-        
-        transactionCell.recepientLabel?.text = transaction.descriptionText
-        transactionCell.amountLabel?.text = NSNumber.init(double: transaction.amount).stringValue
+            
+            var transactionDescription = transaction.descriptionText as? String
+            if transactionDescription == nil {
+                transactionDescription = ""
+            }
+            
+            var cardDescription = transaction.card?.name as? String
+            if cardDescription == nil {
+                cardDescription = ""
+            } else {
+                cardDescription = " (" + cardDescription! + ")"
+            }
+            
+            transactionCell.recepientLabel?.text = transactionDescription! + cardDescription!
+            
+            if let amount = transaction.amount {
+            transactionCell.amountLabel?.text = amount.stringValue
+            print ("amount: \(amount)")
+            }
         }
     }
     
