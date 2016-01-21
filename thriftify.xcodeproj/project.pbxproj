@@ -28,6 +28,7 @@
 		672C1A021C4ED28400A9744F /* TFRecipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19FA1C4ED28400A9744F /* TFRecipient.swift */; };
 		672C1A031C4ED28400A9744F /* TFTransaction.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19FB1C4ED28400A9744F /* TFTransaction.generated.swift */; };
 		672C1A041C4ED28400A9744F /* TFTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19FC1C4ED28400A9744F /* TFTransaction.swift */; };
+		672C1A461C50EB5F00A9744F /* TFCoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A451C50EB5F00A9744F /* TFCoredataManager.swift */; };
 		A0C3C92296505EBA2B086A30 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */; };
 		C0895E15CDA1CC6E4837BDA3 /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14F87AEC8324D980691E764 /* Pods_thriftify.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		672C19FA1C4ED28400A9744F /* TFRecipient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFRecipient.swift; path = Model/coredata_ACDGen/TFRecipient.swift; sourceTree = "<group>"; };
 		672C19FB1C4ED28400A9744F /* TFTransaction.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTransaction.generated.swift; sourceTree = "<group>"; };
 		672C19FC1C4ED28400A9744F /* TFTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTransaction.swift; path = Model/coredata_ACDGen/TFTransaction.swift; sourceTree = "<group>"; };
+		672C1A451C50EB5F00A9744F /* TFCoredataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCoredataManager.swift; path = Model/Managers/TFCoredataManager.swift; sourceTree = "<group>"; };
 		6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14F87AEC8324D980691E764 /* Pods_thriftify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +225,7 @@
 		672C19D21C47E76300A9744F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				672C1A451C50EB5F00A9744F /* TFCoredataManager.swift */,
 				672C19E51C48481900A9744F /* TFServerManager.swift */,
 			);
 			name = Managers;
@@ -540,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672C1A461C50EB5F00A9744F /* TFCoredataManager.swift in Sources */,
 				672C19FE1C4ED28400A9744F /* TFCategory.swift in Sources */,
 				672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */,
 				672C19E61C48481900A9744F /* TFServerManager.swift in Sources */,

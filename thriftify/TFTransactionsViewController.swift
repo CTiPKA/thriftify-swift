@@ -23,27 +23,24 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        TFServerManager().getTransactions()
         
         showSpinner()
         
-        setupFRC()
-        
-//        let model = CoreDataModel(name: modelName, bundle: modelBundle)
-//        let factory = CoreDataStackFactory(model: model)
-//        
-//        factory.createStackInBackground { (result: CoreDataStackResult) -> Void in
-//            switch result {
-//            case .Success(let s):
-//                self.stack = s
-//                self.setupFRC()
-//                
-//            case .Failure(let err):
-//                assertionFailure("Error creating stack: \(err)")
-//            }
-    
-//            self.hideSpinner()
-//        }
+        TFServerManager().getTransactions() {
+            result in
+            
+            switch result {
+            case .Success(let json):
+                TFCoredataManager.newTransactions(self.dataContext, jsonData: json)
+                self.setupFRC()
+                self.hideSpinner()
+                break
+            case .Failure(_):
+                //error happend
+                self.hideSpinner()
+                break
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

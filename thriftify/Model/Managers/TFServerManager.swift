@@ -10,17 +10,30 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
-import AlecrimCoreData
+//import AlecrimCoreData
 
 class TFServerManager {
-    
-//    let dataContext = DataContext()
-    
-    init() {
+   
+    func getCards (completionHandler: (Result:Result<JSON,NSError>) -> Void) {
+        Alamofire.request(TFServerManager.Router.CardsList)
+            .responseJSON () {
+                response in
+                
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        //print("JSON: \(json)")
+                        return completionHandler (Result: .Success(json["results"]))
+                    }
+                case .Failure(let error):
+                    print(error)
+                    return completionHandler (Result: .Failure(error))
+                }
+        }
     }
     
-    func getTransactions ()
-    {
+    func getTransactions (completionHandler: (Result:Result<JSON,NSError>) -> Void) {
         Alamofire.request(TFServerManager.Router.TransactionListFull)
             .responseJSON () {
                 response in
@@ -29,12 +42,12 @@ class TFServerManager {
                 case .Success:
                     if let value = response.result.value {
                         let json = JSON(value)
-//                        print("JSON: \(json)")
-                        
-                        TFTransaction.newTransactions(json["results"])
+                        //print("JSON: \(json)")
+                        return completionHandler (Result: .Success(json["results"]))
                     }
                 case .Failure(let error):
                     print(error)
+                    return completionHandler (Result: .Failure(error))
                 }
         }
     }
@@ -46,7 +59,7 @@ class TFServerManager {
         static let RESTAPIKey = "cgH2dajw4usnlR23UT4jOjXqWuhDSwONQQ6WysNg"
         
         case TransactionListFull
-        case PopularPhotos(Int)
+        case CardsList
         case Comments(Int, Int)
         
         var URLRequest: NSMutableURLRequest {
@@ -57,9 +70,8 @@ class TFServerManager {
                 case .TransactionListFull:
                     return ("/classes/Transactions",nil)
                     
-                case .PopularPhotos(let page):
-                    let params = ["consumer_key": Router.consumerKey, "page": "\(page)", "feature": "popular", "rpp": "50", "include_store": "store_download", "include_status": "votes"]
-                    return ("/phtos", params)
+                case .CardsList:
+                    return ("/classes/Cards",nil)
                     
                 case .Comments(let photoID, let commentsPage):
                     let params = ["consumer_key": Router.consumerKey, "comments": "1", "comments_page": "\(commentsPage)"]
