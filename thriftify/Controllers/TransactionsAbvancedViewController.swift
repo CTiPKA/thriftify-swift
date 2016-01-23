@@ -1,8 +1,8 @@
 //
-//  TFTransactionsViewController.swift
+//  TransactionsAbvancedViewController.swift
 //  thriftify
 //
-//  Created by Vadim Trulyaev on 1/14/16.
+//  Created by Vadim Trulyaev on 1/22/16.
 //  Copyright © 2016 vt. All rights reserved.
 //
 
@@ -11,21 +11,29 @@ import CoreData
 
 import AlecrimCoreData
 
-class TFTransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+struct TransactionCategorized {
+    let month: String
+    let transaction: TFTransaction
+}
+
+class TransactionsAbvancedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     let dataContext = DataContext()
     
-    var transactions = [TFTransaction]()
-    var frc: NSFetchedResultsController?
+    var transactions = [TransactionCategorized] ()
+//    var transactionsCategorizedDict = [String : [TFTransaction]] ()
+    
+    typealias TransactionEntry = (String, [TFTransaction])
+    var transactionsCategorizedArr = [TransactionEntry] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         populateCards()
-
+        
     }
     
     func populateCards () {
@@ -53,7 +61,7 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
             switch result {
             case .Success(let json):
                 TFCoredataManager.newTransactions(self.dataContext, jsonData: json)
-                self.setupFRC()
+                self.setupTableView()
                 self.hideSpinner()
                 break
             case .Failure(_):
@@ -63,43 +71,39 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: Helpers
-    
-    func fetchRequest() -> NSFetchRequest {
-        let request = NSFetchRequest.init(entityName: TFTransaction.entityName)
-        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
-        return request
+    func setupTableView() {
+        transactionsCategorizedArr = buildTransactionIndex(dataContext.tftransactions.orderByAscending({ $0.date }).map({ $0 }))
+        
+        print("transactions categories count: \(transactionsCategorizedArr.count)")
+        
+        tableView.reloadData()
     }
     
-    func setupFRC() {
-        let request = fetchRequest()
-        
-        let transactions = dataContext.tftransactions
-        print("transactions count: \(transactions.count())")
-        
-        self.frc = NSFetchedResultsController(fetchRequest: request,
-            managedObjectContext: self.dataContext,
-            sectionNameKeyPath: nil,
-            cacheName: nil)
-        
-        self.frc?.delegate = self
-        
-        fetchData()
+    func distinct<T: Equatable>(source: [T]) -> [T] {
+        var unique = [T]()
+        for item in source {
+            if !unique.contains(item) {
+                unique.append(item)
+            }
+        }
+        return unique
     }
     
-    func fetchData() {
-        do {
-            try self.frc?.performFetch()
-            
-            tableView.reloadData()
-        } catch {
-            assertionFailure("Failed to fetch: \(error)")
+    func buildTransactionIndex(transactions: [TFTransaction]) -> [TransactionEntry] {
+        return distinct(transactions.map({ $0.month }))
+            .map {
+                (month) -> TransactionEntry in
+                return (month, transactions.filter {
+                    (transaction) -> Bool in
+                    transaction.month == month
+                    })
         }
     }
     
@@ -112,19 +116,19 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
     private func hideSpinner() {
         self.navigationItem.rightBarButtonItem = nil
     }
-
+    
     // MARK: Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return transactionsCategorizedArr.count ?? 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.frc?.fetchedObjects?.count ?? 0
+        return transactionsCategorizedArr[section].1.count ?? 0
     }
     
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        let transaction = self.frc?.objectAtIndexPath(indexPath) as! TFTransaction
+        let transaction = self.transactionsCategorizedArr[indexPath.section].1[indexPath.row]
         if let transactionCell = cell as? TransactionTableViewCell {
             
             var transactionDescription = transaction.descriptionText as? String
@@ -141,9 +145,10 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
             
             transactionCell.recepientLabel?.text = transactionDescription! + cardDescription!
             
+//            print ("date: \(transaction.date)")
+            
             if let amount = transaction.amount {
-            transactionCell.amountLabel?.text = amount.stringValue
-            print ("amount: \(amount)")
+                transactionCell.amountLabel?.text = amount.stringValue
             }
         }
     }
@@ -155,7 +160,14 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Transactions"
+        
+        if self.transactionsCategorizedArr[section].1.count > 0 {
+//            print ("month: \(self.transactionsCategorizedArr[section].0)")
+            return self.transactionsCategorizedArr[section].0
+        } else {
+            print ("self.transactions is empty")
+            return "!empty month"
+        }
     }
     
     
@@ -164,52 +176,5 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
-    
-    
-    // MARK: Fetched results controller delegate
-    
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
-        tableView.beginUpdates()
-    }
-    
-    func controller(
-        controller: NSFetchedResultsController,
-        didChangeSection sectionInfo: NSFetchedResultsSectionInfo,
-        atIndex sectionIndex: Int,
-        forChangeType type: NSFetchedResultsChangeType) {
-            switch type {
-            case .Insert:
-                tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            case .Delete:
-                tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            default:
-                break
-            }
-    }
-    
-    func controller(
-        controller: NSFetchedResultsController,
-        didChangeObject anObject: AnyObject,
-        atIndexPath indexPath: NSIndexPath?,
-        forChangeType type: NSFetchedResultsChangeType,
-        newIndexPath: NSIndexPath?) {
-            switch type {
-            case .Insert:
-                tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-            case .Delete:
-                tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-            case .Update:
-                configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
-            case .Move:
-                tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-                tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-            }
-    }
-    
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
-        tableView.endUpdates()
-    }
-
 
 }
-

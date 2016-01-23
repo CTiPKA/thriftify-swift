@@ -29,11 +29,11 @@ class TFCoredataManager: NSObject {
         card.number = json["number"].numberValue
         card.cardholder = json["ownerName"].stringValue
         
-        print ("Card identifier: \(card.identifier)")
+//        print ("Card identifier: \(card.identifier)")
         
         do {
             try dataContext.save()
-            print ("dataContext saved successfuly")
+            //print ("dataContext saved successfuly")
         }
         catch let error {
             // do a nice error handling here
@@ -43,35 +43,39 @@ class TFCoredataManager: NSObject {
     
     class func newTransactions (dataContext: DataContext, jsonData:JSON) {
         for (_,subJson):(String, JSON) in jsonData {
-            print("index (\(index)): \(subJson)")
+//            print("index (\(index)): \(subJson)")
             newTransaction (dataContext, json: subJson)
         }
     }
     
     class func newTransaction (dataContext: DataContext, json:JSON) {
         
-        let firstCard = dataContext.tfcards.first()
+        let firstCard = dataContext.tfcards.first({ $0.identifier == json["cardId"].stringValue })
         
         let transaction = dataContext.tftransactions.firstOrCreated({$0.identifier == json["objectId"].stringValue})
-            transaction.amount = json["amount"].doubleValue
-            transaction.comment = json["comment"].stringValue
-            transaction.date = NSDateFormatter().dateFromString(json["transactionDate"].stringValue)
-            transaction.descriptionText = nil   //json["description"].stringValue
-            transaction.card = firstCard
-            transaction.category = nil
-            transaction.currency = nil
-            transaction.recipient = nil
+        transaction.amount = json["amount"].doubleValue
+        transaction.comment = json["comment"].stringValue
         
-        print ("Transaction identifier: \(transaction.identifier), amount: \(transaction.amount)")
+        // 2016-01-21T12:18:52.693Z
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        transaction.date = formatter.dateFromString(json["transactionDate"].stringValue)
+        transaction.descriptionText = json["description"].stringValue
+        transaction.card = firstCard
+        transaction.category = nil
+        transaction.currency = nil
+        transaction.recipient = nil
+        
+//        print ("Transaction identifier: \(transaction.identifier), amount: \(transaction.amount)")
         
         do {
             try dataContext.save()
-            print ("dataContext saved successfuly")
+            //print ("dataContext saved successfuly")
         }
         catch let error {
             // do a nice error handling here
             print ("dataContext save error: \(error)")
         }
     }
-    
 }

@@ -31,6 +31,7 @@
 		672C1A481C51037B00A9744F /* TFCard.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A471C51037B00A9744F /* TFCard.generated.swift */; };
 		672C1A4A1C51038300A9744F /* TFCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A491C51038300A9744F /* TFCard.swift */; };
 		672C1A4C1C5104DD00A9744F /* TFServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A4B1C5104DD00A9744F /* TFServerManager.swift */; };
+		672C1A4E1C5259A800A9744F /* TransactionsAbvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */; };
 		A0C3C92296505EBA2B086A30 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */; };
 		C0895E15CDA1CC6E4837BDA3 /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14F87AEC8324D980691E764 /* Pods_thriftify.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		672C1A471C51037B00A9744F /* TFCard.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFCard.generated.swift; sourceTree = "<group>"; };
 		672C1A491C51038300A9744F /* TFCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCard.swift; path = Model/coredata_ACDGen/TFCard.swift; sourceTree = "<group>"; };
 		672C1A4B1C5104DD00A9744F /* TFServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFServerManager.swift; path = Model/Managers/TFServerManager.swift; sourceTree = "<group>"; };
+		672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionsAbvancedViewController.swift; path = Controllers/TransactionsAbvancedViewController.swift; sourceTree = "<group>"; };
 		6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14F87AEC8324D980691E764 /* Pods_thriftify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 			children = (
 				672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */,
 				672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */,
+				672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				672C1A4C1C5104DD00A9744F /* TFServerManager.swift in Sources */,
 				672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */,
 				672C19A01C47D1EF00A9744F /* thriftify.xcdatamodeld in Sources */,
+				672C1A4E1C5259A800A9744F /* TransactionsAbvancedViewController.swift in Sources */,
 				672C19FF1C4ED28400A9744F /* TFCurrency.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
