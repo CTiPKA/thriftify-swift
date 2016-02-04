@@ -24,8 +24,27 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        if let firstTransaction = transactions.first {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "mmmm '‘' YY"
+            self.title = dateFormatter.stringFromDate(firstTransaction.date!);
+        } else {
+            self.title = "";
+        }
+        
+//        customiseNavBar ()
+        
         populateCards()
-
+    }
+    
+    func customiseNavBar () {
+//        TFAppAppearance.applyAppAppearance()
+        
+        self.navigationController!.navigationBar.barTintColor = UIColor.greenColor()
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+        
+//        UINavigationBar.appearance().backgroundColor = TFAppAppearance.navBarColor
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: TFAppAppearance.navBarTitleColor]
     }
     
     func populateCards () {

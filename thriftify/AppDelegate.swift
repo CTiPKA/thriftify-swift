@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self])
 
+        TFAppAppearance.applyAppAppearance()
+
         return true
     }
 

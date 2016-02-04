@@ -25,7 +25,7 @@ class TransactionsAbvancedViewController: UIViewController, UITableViewDataSourc
     var transactions = [TransactionCategorized] ()
 //    var transactionsCategorizedDict = [String : [TFTransaction]] ()
     
-    typealias TransactionEntry = (String, [TFTransaction])
+    typealias TransactionEntry = (month:String, transactions:[TFTransaction])
     var transactionsCategorizedArr = [TransactionEntry] ()
     
     override func viewDidLoad() {
@@ -33,7 +33,35 @@ class TransactionsAbvancedViewController: UIViewController, UITableViewDataSourc
         // Do any additional setup after loading the view, typically from a nib.
         
         populateCards()
+        updateTitle()
         
+//        customiseNavBar()
+    }
+    
+    func updateTitle () {
+        if let firstTransactionCategory = transactionsCategorizedArr.first {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MMMM '‘' yy"
+            if let transaction = firstTransactionCategory.1.first {
+                self.title = dateFormatter.stringFromDate(transaction.date!);
+            }
+        } else {
+            self.title = "";
+        }
+    }
+    
+    func customiseNavBar () {
+//        TFAppAppearance.applyAppAppearance()
+        
+//        self.navigationController!.navigationBar.barStyle = UIBarStyle.Black
+//        self.navigationController!.navigationBar.barTintColor = TFAppAppearance.navBarColor
+//        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: TFAppAppearance.navBarTitleColor]
+        
+//        UINavigationBar.appearance().barStyle = UIBarStyle.Black
+//        UINavigationBar.appearance().barTintColor = TFAppAppearance.navBarColor
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: TFAppAppearance.navBarTitleColor]
+        
+//        self.navigationController?.navigationBar.translucent = false
     }
     
     func populateCards () {
@@ -84,6 +112,7 @@ class TransactionsAbvancedViewController: UIViewController, UITableViewDataSourc
         print("transactions categories count: \(transactionsCategorizedArr.count)")
         
         tableView.reloadData()
+        updateTitle()
     }
     
     func distinct<T: Equatable>(source: [T]) -> [T] {
@@ -159,16 +188,30 @@ class TransactionsAbvancedViewController: UIViewController, UITableViewDataSourc
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        if self.transactionsCategorizedArr[section].1.count > 0 {
-//            print ("month: \(self.transactionsCategorizedArr[section].0)")
-            return self.transactionsCategorizedArr[section].0
-        } else {
-            print ("self.transactions is empty")
-            return "!empty month"
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        
+//        if self.transactionsCategorizedArr[section].1.count > 0 {
+////            print ("month: \(self.transactionsCategorizedArr[section].0)")
+//            return self.transactionsCategorizedArr[section].0
+//        } else {
+//            print ("self.transactions is empty")
+//            return "!empty month"
+//        }
+//    }
+    
+    func configureSection(cell: UITableViewCell, atSection section: Int) {
+        let transactionEntry = self.transactionsCategorizedArr[section]
+        if let transactionCell = cell as? MonthCategoryCell {
+            transactionCell.monthTitle?.text = transactionEntry.month
         }
     }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Month Category")
+        configureSection(cell!, atSection: section)
+        return cell
+    }
+    
     
     
     // MARK: Table view delegate
@@ -176,5 +219,7 @@ class TransactionsAbvancedViewController: UIViewController, UITableViewDataSourc
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
+    
+
 
 }
