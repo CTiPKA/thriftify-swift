@@ -10,8 +10,12 @@ import UIKit
 import CoreData
 
 import AlecrimCoreData
+import DCPathButton
 
-class TFTransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+class TFTransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate,DCPathButtonDelegate {
+    
+    var dcPathButton:DCPathButton!
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,8 +36,9 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
             self.title = "";
         }
         
+        configureDCPathButton()
+
 //        customiseNavBar ()
-        
         populateCards()
     }
     
@@ -229,6 +234,36 @@ class TFTransactionsViewController: UIViewController, UITableViewDataSource, UIT
         tableView.endUpdates()
     }
 
+    func configureDCPathButton() {
+        
+        dcPathButton = DCPathButton(centerImage: UIImage(named: "chooser-button-tab"), highlightedImage: UIImage(named: "chooser-button-tab-highlighted"))
+        
+        dcPathButton.delegate = self
+        dcPathButton.dcButtonCenter = CGPointMake(self.view.bounds.width/2, self.view.bounds.height - 80)
+        dcPathButton.allowSounds = true
+        dcPathButton.allowCenterButtonRotation = true
+        dcPathButton.bloomRadius = 80
+        dcPathButton.bloomAngel = 150
+        
+        let itemButton_1 = DCPathItemButton(image: UIImage(named: "chooser-moment-icon-music"), highlightedImage: UIImage(named: "chooser-moment-icon-music-highlighted"), backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted"))
+        let itemButton_2 = DCPathItemButton(image: UIImage(named: "chooser-moment-icon-place"), highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted"), backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted"))
+        let itemButton_3 = DCPathItemButton(image: UIImage(named: "chooser-moment-icon-camera"), highlightedImage: UIImage(named: "chooser-moment-icon-camera-highlighted"), backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted"))
+        
+        dcPathButton.addPathItems([itemButton_1, itemButton_2, itemButton_3])
+        
+        self.view.insertSubview(dcPathButton, aboveSubview: tableView)
+        
+    }
+    
+    // DCPathButton Delegate
+    //
+    func pathButton(dcPathButton: DCPathButton!, clickItemButtonAtIndex itemButtonIndex: UInt) {
+        
+        let alertView = UIAlertView(title: "", message: "You tap at index \(itemButtonIndex)", delegate: nil, cancelButtonTitle: "Ok")
+        
+        alertView.show()
+        
+    }
 
 }
 
