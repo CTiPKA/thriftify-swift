@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39D2F2B5D4D0403FD3AC2BED /* Pods_thriftifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */; };
+		54D809AA1C3BD72590588DD4 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0C084722DD8AB7E72BEC67 /* Pods_thriftifyUITests.framework */; };
 		672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19971C47D1EF00A9744F /* AppDelegate.swift */; };
 		672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */; };
 		672C199D1C47D1EF00A9744F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672C199B1C47D1EF00A9744F /* Main.storyboard */; };
@@ -34,13 +34,13 @@
 		672C1A4E1C5259A800A9744F /* TransactionsAbvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */; };
 		674739981C608EDF00635799 /* TFAppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674739971C608EDF00635799 /* TFAppAppearance.swift */; };
 		6747399A1C60ADFA00635799 /* MonthCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674739991C60ADFA00635799 /* MonthCategoryCell.swift */; };
-		A0C3C92296505EBA2B086A30 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */; };
 		BAA69CF51C6D1CD4004361EB /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */; };
 		BAA69CF61C6D1CD4004361EB /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CF01C6D1CD4004361EB /* DCPathItemButton.m */; };
 		BAA69CF71C6D1CD4004361EB /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAA69CF21C6D1CD4004361EB /* bloom.caf */; };
 		BAA69CF81C6D1CD4004361EB /* fold.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAA69CF31C6D1CD4004361EB /* fold.caf */; };
 		BAA69CF91C6D1CD4004361EB /* selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAA69CF41C6D1CD4004361EB /* selected.caf */; };
-		C0895E15CDA1CC6E4837BDA3 /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14F87AEC8324D980691E764 /* Pods_thriftify.framework */; };
+		C04DAB4FE24C776EAE79F7DE /* Pods_thriftify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93CD6BDD8FF16BF27E591F9 /* Pods_thriftify.framework */; };
+		F5017243C24F604F6BA69EEF /* Pods_thriftifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070945EF9A8B4F24C7382131 /* Pods_thriftifyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		004352F9A6723FFAEA1AC95D /* Pods-thriftify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.debug.xcconfig"; sourceTree = "<group>"; };
-		028AFF2DEE8B42EC2B9B75C2 /* Pods-thriftify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.release.xcconfig"; sourceTree = "<group>"; };
-		173D098CABDD1686FDE63929 /* Pods-thriftifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		295C8190C277D2FB0551CBDA /* Pods-thriftifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2E14796F58354BC55E2D6628 /* Pods-thriftifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests.release.xcconfig"; sourceTree = "<group>"; };
-		3CE17B6C744A56F23F616FDB /* Pods-thriftifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		070945EF9A8B4F24C7382131 /* Pods_thriftifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E0C084722DD8AB7E72BEC67 /* Pods_thriftifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		672C19941C47D1EF00A9744F /* thriftify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thriftify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672C19971C47D1EF00A9744F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTransactionsViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +95,9 @@
 		672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionsAbvancedViewController.swift; path = Controllers/TransactionsAbvancedViewController.swift; sourceTree = "<group>"; };
 		674739971C608EDF00635799 /* TFAppAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFAppAppearance.swift; path = Controllers/TFAppAppearance.swift; sourceTree = "<group>"; };
 		674739991C60ADFA00635799 /* MonthCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthCategoryCell.swift; path = Controllers/Transactions/MonthCategoryCell.swift; sourceTree = "<group>"; };
-		6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D215B49804C690600AB4CAE /* Pods-thriftifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		9486169A3CA51346B701A3FD /* Pods-thriftifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9B4BE6E5C685F5F2548D191 /* Pods-thriftify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.debug.xcconfig"; sourceTree = "<group>"; };
 		BAA69CED1C6D1CD4004361EB /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
 		BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
 		BAA69CEF1C6D1CD4004361EB /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
@@ -108,7 +105,10 @@
 		BAA69CF21C6D1CD4004361EB /* bloom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloom.caf; sourceTree = "<group>"; };
 		BAA69CF31C6D1CD4004361EB /* fold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fold.caf; sourceTree = "<group>"; };
 		BAA69CF41C6D1CD4004361EB /* selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = selected.caf; sourceTree = "<group>"; };
-		D14F87AEC8324D980691E764 /* Pods_thriftify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE49CB92676784337E9DE2B /* Pods-thriftifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D07649A3BBA6E9FD2B1304A3 /* Pods-thriftify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.release.xcconfig"; sourceTree = "<group>"; };
+		E68D0C93A6B4AC30435D1D18 /* Pods-thriftifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F93CD6BDD8FF16BF27E591F9 /* Pods_thriftify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thriftify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			files = (
 				672C19D11C47E19C00A9744F /* Crashlytics.framework in Frameworks */,
 				672C19D01C47E19C00A9744F /* Fabric.framework in Frameworks */,
-				C0895E15CDA1CC6E4837BDA3 /* Pods_thriftify.framework in Frameworks */,
+				C04DAB4FE24C776EAE79F7DE /* Pods_thriftify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D2F2B5D4D0403FD3AC2BED /* Pods_thriftifyTests.framework in Frameworks */,
+				F5017243C24F604F6BA69EEF /* Pods_thriftifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,22 +134,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C3C92296505EBA2B086A30 /* Pods_thriftifyUITests.framework in Frameworks */,
+				54D809AA1C3BD72590588DD4 /* Pods_thriftifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25A15E4F75F19D800C091180 /* Pods */ = {
+		0D290B4A8FF42CAA5286CAE3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				004352F9A6723FFAEA1AC95D /* Pods-thriftify.debug.xcconfig */,
-				028AFF2DEE8B42EC2B9B75C2 /* Pods-thriftify.release.xcconfig */,
-				295C8190C277D2FB0551CBDA /* Pods-thriftifyTests.debug.xcconfig */,
-				2E14796F58354BC55E2D6628 /* Pods-thriftifyTests.release.xcconfig */,
-				3CE17B6C744A56F23F616FDB /* Pods-thriftifyUITests.debug.xcconfig */,
-				173D098CABDD1686FDE63929 /* Pods-thriftifyUITests.release.xcconfig */,
+				A9B4BE6E5C685F5F2548D191 /* Pods-thriftify.debug.xcconfig */,
+				D07649A3BBA6E9FD2B1304A3 /* Pods-thriftify.release.xcconfig */,
+				BBE49CB92676784337E9DE2B /* Pods-thriftifyTests.debug.xcconfig */,
+				6D215B49804C690600AB4CAE /* Pods-thriftifyTests.release.xcconfig */,
+				9486169A3CA51346B701A3FD /* Pods-thriftifyUITests.debug.xcconfig */,
+				E68D0C93A6B4AC30435D1D18 /* Pods-thriftifyUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 				672C19B91C47D1EF00A9744F /* thriftifyUITests */,
 				672C19951C47D1EF00A9744F /* Products */,
 				E98AB21575D9C51ACF575357 /* Frameworks */,
-				25A15E4F75F19D800C091180 /* Pods */,
+				0D290B4A8FF42CAA5286CAE3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,9 +325,9 @@
 			children = (
 				672C19CE1C47E19C00A9744F /* Fabric.framework */,
 				672C19CF1C47E19C00A9744F /* Crashlytics.framework */,
-				D14F87AEC8324D980691E764 /* Pods_thriftify.framework */,
-				6B4257541198189BC9E9BA24 /* Pods_thriftifyTests.framework */,
-				B5338D0FF46B00C4B33ACA5A /* Pods_thriftifyUITests.framework */,
+				F93CD6BDD8FF16BF27E591F9 /* Pods_thriftify.framework */,
+				070945EF9A8B4F24C7382131 /* Pods_thriftifyTests.framework */,
+				1E0C084722DD8AB7E72BEC67 /* Pods_thriftifyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,13 +339,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672C19BF1C47D1EF00A9744F /* Build configuration list for PBXNativeTarget "thriftify" */;
 			buildPhases = (
-				35F40FF1ED6DBA6FBCA14835 /* Check Pods Manifest.lock */,
+				10F8971DAAF82291C03951B6 /* Check Pods Manifest.lock */,
 				672C19901C47D1EF00A9744F /* Sources */,
 				672C19911C47D1EF00A9744F /* Frameworks */,
 				672C19921C47D1EF00A9744F /* Resources */,
 				672C19CD1C47E15700A9744F /* ShellScript */,
-				55743270FC3107FBEAE1FA31 /* Embed Pods Frameworks */,
-				CC4629A93887E3389604968A /* Copy Pods Resources */,
+				024D82A8659CA6B7B450BB4F /* Embed Pods Frameworks */,
+				D0CF6FC863AEFE3F7E556875 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,12 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672C19C21C47D1EF00A9744F /* Build configuration list for PBXNativeTarget "thriftifyTests" */;
 			buildPhases = (
-				10F8D0AC27F5C7AC9B10C604 /* Check Pods Manifest.lock */,
+				2F6DEFD78C9A2B2667CDA8EA /* Check Pods Manifest.lock */,
 				672C19A71C47D1EF00A9744F /* Sources */,
 				672C19A81C47D1EF00A9744F /* Frameworks */,
 				672C19A91C47D1EF00A9744F /* Resources */,
-				39372ECF02119523923229DD /* Embed Pods Frameworks */,
-				1888CDD39844F8921EDA330B /* Copy Pods Resources */,
+				F094230A689E17A94F620F48 /* Embed Pods Frameworks */,
+				90779BF4A22D61EC6B4101CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,11 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672C19C51C47D1EF00A9744F /* Build configuration list for PBXNativeTarget "thriftifyUITests" */;
 			buildPhases = (
-				EF6863CC37ADA1DF43EC5BA5 /* Check Pods Manifest.lock */,
+				7886065B096491486F29138D /* Check Pods Manifest.lock */,
 				672C19B21C47D1EF00A9744F /* Sources */,
 				672C19B31C47D1EF00A9744F /* Frameworks */,
 				672C19B41C47D1EF00A9744F /* Resources */,
-				5E24475BE857A9F6EEBCF42B /* Copy Pods Resources */,
+				F47BF710F7479E44D6D0C28C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -471,67 +471,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10F8D0AC27F5C7AC9B10C604 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		1888CDD39844F8921EDA330B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		35F40FF1ED6DBA6FBCA14835 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		39372ECF02119523923229DD /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55743270FC3107FBEAE1FA31 /* Embed Pods Frameworks */ = {
+		024D82A8659CA6B7B450BB4F /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -546,19 +486,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftify/Pods-thriftify-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E24475BE857A9F6EEBCF42B /* Copy Pods Resources */ = {
+		10F8971DAAF82291C03951B6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F6DEFD78C9A2B2667CDA8EA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		672C19CD1C47E15700A9744F /* ShellScript */ = {
@@ -574,7 +529,37 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 41a6cbd8378b9bb0c89fd995522b18ff4e7647ab 87b71f3a13645c1943457bb116588ef11964d79cd53350718013efa6fd0817d4";
 		};
-		CC4629A93887E3389604968A /* Copy Pods Resources */ = {
+		7886065B096491486F29138D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90779BF4A22D61EC6B4101CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0CF6FC863AEFE3F7E556875 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -589,19 +574,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftify/Pods-thriftify-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF6863CC37ADA1DF43EC5BA5 /* Check Pods Manifest.lock */ = {
+		F094230A689E17A94F620F48 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F47BF710F7479E44D6D0C28C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -769,12 +769,12 @@
 		};
 		672C19C01C47D1EF00A9744F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 004352F9A6723FFAEA1AC95D /* Pods-thriftify.debug.xcconfig */;
+			baseConfigurationReference = A9B4BE6E5C685F5F2548D191 /* Pods-thriftify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -789,11 +789,11 @@
 		};
 		672C19C11C47D1EF00A9744F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 028AFF2DEE8B42EC2B9B75C2 /* Pods-thriftify.release.xcconfig */;
+			baseConfigurationReference = D07649A3BBA6E9FD2B1304A3 /* Pods-thriftify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -808,7 +808,7 @@
 		};
 		672C19C31C47D1EF00A9744F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 295C8190C277D2FB0551CBDA /* Pods-thriftifyTests.debug.xcconfig */;
+			baseConfigurationReference = BBE49CB92676784337E9DE2B /* Pods-thriftifyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = thriftifyTests/Info.plist;
@@ -821,7 +821,7 @@
 		};
 		672C19C41C47D1EF00A9744F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E14796F58354BC55E2D6628 /* Pods-thriftifyTests.release.xcconfig */;
+			baseConfigurationReference = 6D215B49804C690600AB4CAE /* Pods-thriftifyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = thriftifyTests/Info.plist;
@@ -834,7 +834,7 @@
 		};
 		672C19C61C47D1EF00A9744F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CE17B6C744A56F23F616FDB /* Pods-thriftifyUITests.debug.xcconfig */;
+			baseConfigurationReference = 9486169A3CA51346B701A3FD /* Pods-thriftifyUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = thriftifyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -847,7 +847,7 @@
 		};
 		672C19C71C47D1EF00A9744F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 173D098CABDD1686FDE63929 /* Pods-thriftifyUITests.release.xcconfig */;
+			baseConfigurationReference = E68D0C93A6B4AC30435D1D18 /* Pods-thriftifyUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = thriftifyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
