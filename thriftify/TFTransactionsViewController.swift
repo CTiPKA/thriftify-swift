@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 
 import AlecrimCoreData
-import DCPathButton
 
 class TFTransactionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate,DCPathButtonDelegate {
     

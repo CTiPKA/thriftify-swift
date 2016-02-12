@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 
 import AlecrimCoreData
-import DCPathButton
 
 struct TransactionCategorized {
     let month: String

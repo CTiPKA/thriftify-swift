@@ -98,6 +98,7 @@
 		6D215B49804C690600AB4CAE /* Pods-thriftifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		9486169A3CA51346B701A3FD /* Pods-thriftifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9B4BE6E5C685F5F2548D191 /* Pods-thriftify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.debug.xcconfig"; sourceTree = "<group>"; };
+		BA0001C11C6E15FC0019977F /* thriftify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "thriftify-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAA69CED1C6D1CD4004361EB /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
 		BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
 		BAA69CEF1C6D1CD4004361EB /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 		672C19CB1C47D24C00A9744F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BA0001C11C6E15FC0019977F /* thriftify-Bridging-Header.h */,
 				672C19971C47D1EF00A9744F /* AppDelegate.swift */,
 				672C19A11C47D1EF00A9744F /* Assets.xcassets */,
 				672C19A61C47D1EF00A9744F /* Info.plist */,
@@ -783,7 +785,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vt.thriftify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/thriftify/thriftify-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -802,7 +804,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vt.thriftify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/thriftify/thriftify-Bridging-Header.h";
 			};
 			name = Release;
 		};
