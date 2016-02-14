@@ -10,7 +10,7 @@
 		54D809AA1C3BD72590588DD4 /* Pods_thriftifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0C084722DD8AB7E72BEC67 /* Pods_thriftifyUITests.framework */; };
 		672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19971C47D1EF00A9744F /* AppDelegate.swift */; };
 		672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */; };
-		672C199D1C47D1EF00A9744F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672C199B1C47D1EF00A9744F /* Main.storyboard */; };
+		672C199D1C47D1EF00A9744F /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672C199B1C47D1EF00A9744F /* Transactions.storyboard */; };
 		672C19A01C47D1EF00A9744F /* thriftify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 672C199E1C47D1EF00A9744F /* thriftify.xcdatamodeld */; };
 		672C19A21C47D1EF00A9744F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672C19A11C47D1EF00A9744F /* Assets.xcassets */; };
 		672C19A51C47D1EF00A9744F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672C19A31C47D1EF00A9744F /* LaunchScreen.storyboard */; };
@@ -31,9 +31,14 @@
 		672C1A481C51037B00A9744F /* TFCard.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A471C51037B00A9744F /* TFCard.generated.swift */; };
 		672C1A4A1C51038300A9744F /* TFCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A491C51038300A9744F /* TFCard.swift */; };
 		672C1A4C1C5104DD00A9744F /* TFServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A4B1C5104DD00A9744F /* TFServerManager.swift */; };
-		672C1A4E1C5259A800A9744F /* TransactionsAbvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */; };
+		672C1A4E1C5259A800A9744F /* TransactionsAdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C1A4D1C5259A800A9744F /* TransactionsAdvancedViewController.swift */; };
 		674739981C608EDF00635799 /* TFAppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674739971C608EDF00635799 /* TFAppAppearance.swift */; };
 		6747399A1C60ADFA00635799 /* MonthCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674739991C60ADFA00635799 /* MonthCategoryCell.swift */; };
+		677442481C70872100C0F23C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677442471C70872100C0F23C /* Menu.storyboard */; };
+		6774424C1C7094D000C0F23C /* CardsTabPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774424B1C7094D000C0F23C /* CardsTabPlaceholderViewController.swift */; };
+		6774424E1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774424D1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift */; };
+		677442501C70A20F00C0F23C /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6774424F1C70A20F00C0F23C /* Cards.storyboard */; };
+		677442521C70A2B500C0F23C /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677442511C70A2B500C0F23C /* CardsViewController.swift */; };
 		BAA69CF51C6D1CD4004361EB /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */; };
 		BAA69CF61C6D1CD4004361EB /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CF01C6D1CD4004361EB /* DCPathItemButton.m */; };
 		BAA69CF71C6D1CD4004361EB /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAA69CF21C6D1CD4004361EB /* bloom.caf */; };
@@ -66,7 +71,7 @@
 		672C19941C47D1EF00A9744F /* thriftify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thriftify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672C19971C47D1EF00A9744F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTransactionsViewController.swift; sourceTree = "<group>"; };
-		672C199C1C47D1EF00A9744F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		672C199C1C47D1EF00A9744F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Transactions.storyboard; sourceTree = "<group>"; };
 		672C199F1C47D1EF00A9744F /* thriftify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = thriftify.xcdatamodel; sourceTree = "<group>"; };
 		672C19A11C47D1EF00A9744F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672C19A41C47D1EF00A9744F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,9 +97,14 @@
 		672C1A471C51037B00A9744F /* TFCard.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFCard.generated.swift; sourceTree = "<group>"; };
 		672C1A491C51038300A9744F /* TFCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFCard.swift; path = Model/coredata_ACDGen/TFCard.swift; sourceTree = "<group>"; };
 		672C1A4B1C5104DD00A9744F /* TFServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFServerManager.swift; path = Model/Managers/TFServerManager.swift; sourceTree = "<group>"; };
-		672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionsAbvancedViewController.swift; path = Controllers/TransactionsAbvancedViewController.swift; sourceTree = "<group>"; };
+		672C1A4D1C5259A800A9744F /* TransactionsAdvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionsAdvancedViewController.swift; path = Controllers/TransactionsAdvancedViewController.swift; sourceTree = "<group>"; };
 		674739971C608EDF00635799 /* TFAppAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFAppAppearance.swift; path = Controllers/TFAppAppearance.swift; sourceTree = "<group>"; };
 		674739991C60ADFA00635799 /* MonthCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthCategoryCell.swift; path = Controllers/Transactions/MonthCategoryCell.swift; sourceTree = "<group>"; };
+		677442471C70872100C0F23C /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = View/Storyboards/Menu.storyboard; sourceTree = "<group>"; };
+		6774424B1C7094D000C0F23C /* CardsTabPlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardsTabPlaceholderViewController.swift; path = Controllers/Cards/CardsTabPlaceholderViewController.swift; sourceTree = "<group>"; };
+		6774424D1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionsTabPlaceholderViewController.swift; path = Controllers/Transactions/TransactionsTabPlaceholderViewController.swift; sourceTree = "<group>"; };
+		6774424F1C70A20F00C0F23C /* Cards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Cards.storyboard; path = View/Storyboards/Cards.storyboard; sourceTree = "<group>"; };
+		677442511C70A2B500C0F23C /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardsViewController.swift; path = Controllers/Cards/CardsViewController.swift; sourceTree = "<group>"; };
 		6D215B49804C690600AB4CAE /* Pods-thriftifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyTests/Pods-thriftifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		9486169A3CA51346B701A3FD /* Pods-thriftifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9B4BE6E5C685F5F2548D191 /* Pods-thriftify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,7 +231,9 @@
 		672C19C91C47D23200A9744F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				672C199B1C47D1EF00A9744F /* Main.storyboard */,
+				677442471C70872100C0F23C /* Menu.storyboard */,
+				672C199B1C47D1EF00A9744F /* Transactions.storyboard */,
+				6774424F1C70A20F00C0F23C /* Cards.storyboard */,
 				672C19A31C47D1EF00A9744F /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -231,10 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				674739971C608EDF00635799 /* TFAppAppearance.swift */,
-				672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */,
-				674739991C60ADFA00635799 /* MonthCategoryCell.swift */,
-				672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */,
-				672C1A4D1C5259A800A9744F /* TransactionsAbvancedViewController.swift */,
+				6774424A1C70917C00C0F23C /* tabTransaction */,
+				677442491C70916D00C0F23C /* tabCards */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,6 +292,27 @@
 			);
 			name = Entities_ACDGen;
 			path = Model/coredata_ACDGen;
+			sourceTree = "<group>";
+		};
+		677442491C70916D00C0F23C /* tabCards */ = {
+			isa = PBXGroup;
+			children = (
+				6774424B1C7094D000C0F23C /* CardsTabPlaceholderViewController.swift */,
+				677442511C70A2B500C0F23C /* CardsViewController.swift */,
+			);
+			name = tabCards;
+			sourceTree = "<group>";
+		};
+		6774424A1C70917C00C0F23C /* tabTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				6774424D1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift */,
+				672C19991C47D1EF00A9744F /* TFTransactionsViewController.swift */,
+				672C1A4D1C5259A800A9744F /* TransactionsAdvancedViewController.swift */,
+				674739991C60ADFA00635799 /* MonthCategoryCell.swift */,
+				672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */,
+			);
+			name = tabTransaction;
 			sourceTree = "<group>";
 		};
 		BAA69CEA1C6D1C7E004361EB /* Utils */ = {
@@ -451,8 +482,10 @@
 				BAA69CF91C6D1CD4004361EB /* selected.caf in Resources */,
 				672C19A21C47D1EF00A9744F /* Assets.xcassets in Resources */,
 				BAA69CF71C6D1CD4004361EB /* bloom.caf in Resources */,
+				677442501C70A20F00C0F23C /* Cards.storyboard in Resources */,
 				BAA69CF81C6D1CD4004361EB /* fold.caf in Resources */,
-				672C199D1C47D1EF00A9744F /* Main.storyboard in Resources */,
+				677442481C70872100C0F23C /* Menu.storyboard in Resources */,
+				672C199D1C47D1EF00A9744F /* Transactions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,15 +648,18 @@
 			files = (
 				672C1A461C50EB5F00A9744F /* TFCoredataManager.swift in Sources */,
 				672C19FE1C4ED28400A9744F /* TFCategory.swift in Sources */,
+				6774424C1C7094D000C0F23C /* CardsTabPlaceholderViewController.swift in Sources */,
 				672C199A1C47D1EF00A9744F /* TFTransactionsViewController.swift in Sources */,
 				672C1A031C4ED28400A9744F /* TFTransaction.generated.swift in Sources */,
 				6747399A1C60ADFA00635799 /* MonthCategoryCell.swift in Sources */,
 				672C1A021C4ED28400A9744F /* TFRecipient.swift in Sources */,
 				672C19FD1C4ED28400A9744F /* TFCategory.generated.swift in Sources */,
+				677442521C70A2B500C0F23C /* CardsViewController.swift in Sources */,
 				BAA69CF61C6D1CD4004361EB /* DCPathItemButton.m in Sources */,
 				672C19F31C4C2FFC00A9744F /* TransactionTableViewCell.swift in Sources */,
 				672C1A481C51037B00A9744F /* TFCard.generated.swift in Sources */,
 				672C1A011C4ED28400A9744F /* TFRecipient.generated.swift in Sources */,
+				6774424E1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift in Sources */,
 				672C1A001C4ED28400A9744F /* TFCurrency.swift in Sources */,
 				672C1A4A1C51038300A9744F /* TFCard.swift in Sources */,
 				674739981C608EDF00635799 /* TFAppAppearance.swift in Sources */,
@@ -632,7 +668,7 @@
 				672C1A4C1C5104DD00A9744F /* TFServerManager.swift in Sources */,
 				672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */,
 				672C19A01C47D1EF00A9744F /* thriftify.xcdatamodeld in Sources */,
-				672C1A4E1C5259A800A9744F /* TransactionsAbvancedViewController.swift in Sources */,
+				672C1A4E1C5259A800A9744F /* TransactionsAdvancedViewController.swift in Sources */,
 				672C19FF1C4ED28400A9744F /* TFCurrency.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,12 +705,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		672C199B1C47D1EF00A9744F /* Main.storyboard */ = {
+		672C199B1C47D1EF00A9744F /* Transactions.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				672C199C1C47D1EF00A9744F /* Base */,
 			);
-			name = Main.storyboard;
+			name = Transactions.storyboard;
 			sourceTree = "<group>";
 		};
 		672C19A31C47D1EF00A9744F /* LaunchScreen.storyboard */ = {

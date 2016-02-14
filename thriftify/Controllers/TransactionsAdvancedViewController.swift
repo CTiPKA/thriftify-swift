@@ -16,7 +16,7 @@ struct TransactionCategorized {
     let transaction: TFTransaction
 }
 
-class TransactionsAbvancedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DCPathButtonDelegate {
+class TransactionsAdvancedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DCPathButtonDelegate {
     
     var dcPathButton:DCPathButton!
     @IBOutlet weak var tableView: UITableView!
