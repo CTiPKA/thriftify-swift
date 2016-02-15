@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardsViewController: UIViewController {
+class CardsViewController: UIViewController, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +31,16 @@ class CardsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //CollectionView
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Card", forIndexPath: indexPath)
+        return cell
+    }
 
 }
