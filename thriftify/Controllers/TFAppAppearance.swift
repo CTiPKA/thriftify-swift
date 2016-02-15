@@ -23,3 +23,52 @@ class TFAppAppearance {
     }
 
 }
+
+@IBDesignable
+class RoundRectView: UIView {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
+        didSet {
+            layer.borderColor = borderColor.CGColor
+        }
+    }
+}
+
+//extension UIView {
+//    @IBInspectable var cornerRadius: CGFloat {
+//        get {
+//            return layer.cornerRadius
+//        }
+//        set {
+//            layer.cornerRadius = newValue
+//            layer.masksToBounds = newValue > 0
+//        }
+//    }
+//    @IBInspectable var borderWidth: CGFloat {
+//        get {
+//            return layer.borderWidth
+//        }
+//        set {
+//            layer.borderWidth = newValue
+//        }
+//    }
+//    @IBInspectable var borderColor: UIColor{
+//        get {
+//            return UIColor(CGColor: layer.borderColor!)
+//        }
+//        set {
+//            layer.borderColor = newValue.CGColor
+//        }
+//    }
+
+//}
