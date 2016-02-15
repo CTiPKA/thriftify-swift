@@ -46,6 +46,12 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Merel.otf</string>
+		<string>Merel Medium.otf</string>
+		<string>Merel Light.otf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

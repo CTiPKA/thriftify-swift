@@ -39,6 +39,9 @@
 		6774424E1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6774424D1C70951D00C0F23C /* TransactionsTabPlaceholderViewController.swift */; };
 		677442501C70A20F00C0F23C /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6774424F1C70A20F00C0F23C /* Cards.storyboard */; };
 		677442521C70A2B500C0F23C /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677442511C70A2B500C0F23C /* CardsViewController.swift */; };
+		BA0001CA1C72168F0019977F /* Merel.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0001C71C72168F0019977F /* Merel.otf */; };
+		BA0001CB1C72168F0019977F /* Merel Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0001C81C72168F0019977F /* Merel Medium.otf */; };
+		BA0001CC1C72168F0019977F /* Merel Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0001C91C72168F0019977F /* Merel Light.otf */; };
 		BAA69CF51C6D1CD4004361EB /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */; };
 		BAA69CF61C6D1CD4004361EB /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CF01C6D1CD4004361EB /* DCPathItemButton.m */; };
 		BAA69CF71C6D1CD4004361EB /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAA69CF21C6D1CD4004361EB /* bloom.caf */; };
@@ -109,6 +112,9 @@
 		9486169A3CA51346B701A3FD /* Pods-thriftifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftifyUITests/Pods-thriftifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9B4BE6E5C685F5F2548D191 /* Pods-thriftify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thriftify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thriftify/Pods-thriftify.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0001C11C6E15FC0019977F /* thriftify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "thriftify-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA0001C71C72168F0019977F /* Merel.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Merel.otf; sourceTree = "<group>"; };
+		BA0001C81C72168F0019977F /* Merel Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merel Medium.otf"; sourceTree = "<group>"; };
+		BA0001C91C72168F0019977F /* Merel Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merel Light.otf"; sourceTree = "<group>"; };
 		BAA69CED1C6D1CD4004361EB /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
 		BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
 		BAA69CEF1C6D1CD4004361EB /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 		672C19CB1C47D24C00A9744F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BA0001C61C7216620019977F /* Resources */,
 				BA0001C11C6E15FC0019977F /* thriftify-Bridging-Header.h */,
 				672C19971C47D1EF00A9744F /* AppDelegate.swift */,
 				672C19A11C47D1EF00A9744F /* Assets.xcassets */,
@@ -313,6 +320,16 @@
 				672C19F21C4C2FFC00A9744F /* TransactionTableViewCell.swift */,
 			);
 			name = tabTransaction;
+			sourceTree = "<group>";
+		};
+		BA0001C61C7216620019977F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA0001C71C72168F0019977F /* Merel.otf */,
+				BA0001C81C72168F0019977F /* Merel Medium.otf */,
+				BA0001C91C72168F0019977F /* Merel Light.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BAA69CEA1C6D1C7E004361EB /* Utils */ = {
@@ -479,12 +496,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				672C19A51C47D1EF00A9744F /* LaunchScreen.storyboard in Resources */,
+				BA0001CB1C72168F0019977F /* Merel Medium.otf in Resources */,
 				BAA69CF91C6D1CD4004361EB /* selected.caf in Resources */,
 				672C19A21C47D1EF00A9744F /* Assets.xcassets in Resources */,
 				BAA69CF71C6D1CD4004361EB /* bloom.caf in Resources */,
+				BA0001CC1C72168F0019977F /* Merel Light.otf in Resources */,
 				677442501C70A20F00C0F23C /* Cards.storyboard in Resources */,
 				BAA69CF81C6D1CD4004361EB /* fold.caf in Resources */,
 				677442481C70872100C0F23C /* Menu.storyboard in Resources */,
+				BA0001CA1C72168F0019977F /* Merel.otf in Resources */,
 				672C199D1C47D1EF00A9744F /* Transactions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
