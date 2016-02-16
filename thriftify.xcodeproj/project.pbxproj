@@ -42,6 +42,7 @@
 		BA0001CA1C72168F0019977F /* Merel.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0001C71C72168F0019977F /* Merel.otf */; };
 		BA0001CB1C72168F0019977F /* Merel Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0001C81C72168F0019977F /* Merel Medium.otf */; };
 		BA0001CC1C72168F0019977F /* Merel Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA0001C91C72168F0019977F /* Merel Light.otf */; };
+		BA0001CE1C73D95D0019977F /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0001CD1C73D95D0019977F /* CardViewCell.swift */; };
 		BAA69CF51C6D1CD4004361EB /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */; };
 		BAA69CF61C6D1CD4004361EB /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA69CF01C6D1CD4004361EB /* DCPathItemButton.m */; };
 		BAA69CF71C6D1CD4004361EB /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = BAA69CF21C6D1CD4004361EB /* bloom.caf */; };
@@ -115,6 +116,7 @@
 		BA0001C71C72168F0019977F /* Merel.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Merel.otf; sourceTree = "<group>"; };
 		BA0001C81C72168F0019977F /* Merel Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merel Medium.otf"; sourceTree = "<group>"; };
 		BA0001C91C72168F0019977F /* Merel Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merel Light.otf"; sourceTree = "<group>"; };
+		BA0001CD1C73D95D0019977F /* CardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardViewCell.swift; path = Controllers/Cards/CardViewCell.swift; sourceTree = "<group>"; };
 		BAA69CED1C6D1CD4004361EB /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
 		BAA69CEE1C6D1CD4004361EB /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
 		BAA69CEF1C6D1CD4004361EB /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				6774424B1C7094D000C0F23C /* CardsTabPlaceholderViewController.swift */,
 				677442511C70A2B500C0F23C /* CardsViewController.swift */,
+				BA0001CD1C73D95D0019977F /* CardViewCell.swift */,
 			);
 			name = tabCards;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				672C1A4C1C5104DD00A9744F /* TFServerManager.swift in Sources */,
 				672C19981C47D1EF00A9744F /* AppDelegate.swift in Sources */,
 				672C19A01C47D1EF00A9744F /* thriftify.xcdatamodeld in Sources */,
+				BA0001CE1C73D95D0019977F /* CardViewCell.swift in Sources */,
 				672C1A4E1C5259A800A9744F /* TransactionsAdvancedViewController.swift in Sources */,
 				672C19FF1C4ED28400A9744F /* TFCurrency.generated.swift in Sources */,
 			);
