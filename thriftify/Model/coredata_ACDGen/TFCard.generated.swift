@@ -16,13 +16,13 @@ import AlecrimCoreData
 
 extension TFCard {
 
-    @NSManaged public var cardholder: NSString?
-    @NSManaged public var expirationDate: NSDate?
-    @NSManaged public var identifier: NSString?
-    @NSManaged public var name: NSString?
-    @NSManaged public var number: NSNumber?
+    @NSManaged var cardholder: NSString?
+    @NSManaged var expirationDate: NSDate?
+    @NSManaged var identifier: NSString?
+    @NSManaged var name: NSString?
+    @NSManaged var number: NSNumber?
 
-    @NSManaged public var transactions: NSSet
+    @NSManaged var transactions: NSSet
 
 }
 
@@ -32,11 +32,11 @@ extension TFCard {
 
     @NSManaged private func addTransactionsObject(object: TFTransaction)
     @NSManaged private func removeTransactionsObject(object: TFTransaction)
-    @NSManaged public func addTransactions(transactions: NSSet)
-    @NSManaged public func removeTransactions(transactions: NSSet)
+    @NSManaged func addTransactions(transactions: NSSet)
+    @NSManaged func removeTransactions(transactions: NSSet)
 
-    public func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
-    public func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
+    func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
+    func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
 
 }
 
@@ -44,13 +44,13 @@ extension TFCard {
 
 extension TFCard {
 
-    public static let cardholder = AlecrimCoreData.NullableAttribute<NSString>("cardholder")
-    public static let expirationDate = AlecrimCoreData.NullableAttribute<NSDate>("expirationDate")
-    public static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
-    public static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
-    public static let number = AlecrimCoreData.NullableAttribute<NSNumber>("number")
+    static let cardholder = AlecrimCoreData.NullableAttribute<NSString>("cardholder")
+    static let expirationDate = AlecrimCoreData.NullableAttribute<NSDate>("expirationDate")
+    static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
+    static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
+    static let number = AlecrimCoreData.NullableAttribute<NSNumber>("number")
 
-    public static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
+    static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
 
 }
 
@@ -58,13 +58,13 @@ extension TFCard {
 
 extension AlecrimCoreData.AttributeType where Self.ValueType: TFCard {
 
-    public var cardholder: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("cardholder", self) }
-    public var expirationDate: AlecrimCoreData.NullableAttribute<NSDate> { return AlecrimCoreData.NullableAttribute<NSDate>("expirationDate", self) }
-    public var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
-    public var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
-    public var number: AlecrimCoreData.NullableAttribute<NSNumber> { return AlecrimCoreData.NullableAttribute<NSNumber>("number", self) }
+    var cardholder: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("cardholder", self) }
+    var expirationDate: AlecrimCoreData.NullableAttribute<NSDate> { return AlecrimCoreData.NullableAttribute<NSDate>("expirationDate", self) }
+    var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
+    var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
+    var number: AlecrimCoreData.NullableAttribute<NSNumber> { return AlecrimCoreData.NullableAttribute<NSNumber>("number", self) }
 
-    public var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
+    var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
 
 }
 
@@ -72,7 +72,7 @@ extension AlecrimCoreData.AttributeType where Self.ValueType: TFCard {
 
 extension DataContext {
 
-    public var tfcards: AlecrimCoreData.Table<TFCard> { return AlecrimCoreData.Table<TFCard>(dataContext: self) }
+    var tfcards: AlecrimCoreData.Table<TFCard> { return AlecrimCoreData.Table<TFCard>(dataContext: self) }
 
 }
 

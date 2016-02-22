@@ -55,6 +55,7 @@ class TFCoredataManager: NSObject {
         let transaction = dataContext.tftransactions.firstOrCreated({$0.identifier == json["objectId"].stringValue})
         transaction.amount = json["amount"].doubleValue
         transaction.comment = json["comment"].stringValue
+        transaction.transactionType = json["TransactionType"].stringValue
         
         // 2016-01-21T12:18:52.693Z
         let formatter = NSDateFormatter()

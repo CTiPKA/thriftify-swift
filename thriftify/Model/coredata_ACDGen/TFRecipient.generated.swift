@@ -16,11 +16,11 @@ import AlecrimCoreData
 
 extension TFRecipient {
 
-    @NSManaged public var address: NSString?
-    @NSManaged public var identifier: NSString?
-    @NSManaged public var name: NSString?
+    @NSManaged var address: NSString?
+    @NSManaged var identifier: NSString?
+    @NSManaged var name: NSString?
 
-    @NSManaged public var transactions: NSSet
+    @NSManaged var transactions: NSSet
 
 }
 
@@ -30,11 +30,11 @@ extension TFRecipient {
 
     @NSManaged private func addTransactionsObject(object: TFTransaction)
     @NSManaged private func removeTransactionsObject(object: TFTransaction)
-    @NSManaged public func addTransactions(transactions: NSSet)
-    @NSManaged public func removeTransactions(transactions: NSSet)
+    @NSManaged func addTransactions(transactions: NSSet)
+    @NSManaged func removeTransactions(transactions: NSSet)
 
-    public func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
-    public func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
+    func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
+    func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
 
 }
 
@@ -42,11 +42,11 @@ extension TFRecipient {
 
 extension TFRecipient {
 
-    public static let address = AlecrimCoreData.NullableAttribute<NSString>("address")
-    public static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
-    public static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
+    static let address = AlecrimCoreData.NullableAttribute<NSString>("address")
+    static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
+    static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
 
-    public static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
+    static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
 
 }
 
@@ -54,11 +54,11 @@ extension TFRecipient {
 
 extension AlecrimCoreData.AttributeType where Self.ValueType: TFRecipient {
 
-    public var address: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("address", self) }
-    public var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
-    public var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
+    var address: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("address", self) }
+    var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
+    var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
 
-    public var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
+    var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
 
 }
 
@@ -66,7 +66,7 @@ extension AlecrimCoreData.AttributeType where Self.ValueType: TFRecipient {
 
 extension DataContext {
 
-    public var tfrecipients: AlecrimCoreData.Table<TFRecipient> { return AlecrimCoreData.Table<TFRecipient>(dataContext: self) }
+    var tfrecipients: AlecrimCoreData.Table<TFRecipient> { return AlecrimCoreData.Table<TFRecipient>(dataContext: self) }
 
 }
 

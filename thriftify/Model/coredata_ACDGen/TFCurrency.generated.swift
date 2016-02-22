@@ -16,11 +16,11 @@ import AlecrimCoreData
 
 extension TFCurrency {
 
-    @NSManaged public var code: NSString?
-    @NSManaged public var identifier: NSString?
-    @NSManaged public var name: NSString?
+    @NSManaged var code: NSString?
+    @NSManaged var identifier: NSString?
+    @NSManaged var name: NSString?
 
-    @NSManaged public var transactions: NSSet
+    @NSManaged var transactions: NSSet
 
 }
 
@@ -30,11 +30,11 @@ extension TFCurrency {
 
     @NSManaged private func addTransactionsObject(object: TFTransaction)
     @NSManaged private func removeTransactionsObject(object: TFTransaction)
-    @NSManaged public func addTransactions(transactions: NSSet)
-    @NSManaged public func removeTransactions(transactions: NSSet)
+    @NSManaged func addTransactions(transactions: NSSet)
+    @NSManaged func removeTransactions(transactions: NSSet)
 
-    public func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
-    public func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
+    func addTransaction(transaction: TFTransaction) { self.addTransactionsObject(transaction) }
+    func removeTransaction(transaction: TFTransaction) { self.removeTransactionsObject(transaction) }
 
 }
 
@@ -42,11 +42,11 @@ extension TFCurrency {
 
 extension TFCurrency {
 
-    public static let code = AlecrimCoreData.NullableAttribute<NSString>("code")
-    public static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
-    public static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
+    static let code = AlecrimCoreData.NullableAttribute<NSString>("code")
+    static let identifier = AlecrimCoreData.NullableAttribute<NSString>("identifier")
+    static let name = AlecrimCoreData.NullableAttribute<NSString>("name")
 
-    public static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
+    static let transactions = AlecrimCoreData.Attribute<NSSet>("transactions")
 
 }
 
@@ -54,11 +54,11 @@ extension TFCurrency {
 
 extension AlecrimCoreData.AttributeType where Self.ValueType: TFCurrency {
 
-    public var code: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("code", self) }
-    public var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
-    public var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
+    var code: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("code", self) }
+    var identifier: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("identifier", self) }
+    var name: AlecrimCoreData.NullableAttribute<NSString> { return AlecrimCoreData.NullableAttribute<NSString>("name", self) }
 
-    public var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
+    var transactions: AlecrimCoreData.Attribute<NSSet> { return AlecrimCoreData.Attribute<NSSet>("transactions", self) }
 
 }
 
@@ -66,7 +66,7 @@ extension AlecrimCoreData.AttributeType where Self.ValueType: TFCurrency {
 
 extension DataContext {
 
-    public var tfcurrencies: AlecrimCoreData.Table<TFCurrency> { return AlecrimCoreData.Table<TFCurrency>(dataContext: self) }
+    var tfcurrencies: AlecrimCoreData.Table<TFCurrency> { return AlecrimCoreData.Table<TFCurrency>(dataContext: self) }
 
 }
 

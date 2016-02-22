@@ -22,12 +22,19 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     
     let dataContext = DataContext()
-    
     var transactions = [TransactionCategorized] ()
 //    var transactionsCategorizedDict = [String : [TFTransaction]] ()
     
     typealias TransactionEntry = (month:String, transactions:[TFTransaction])
     var transactionsCategorizedArr = [TransactionEntry] ()
+    
+    let formatterWithSepator: NSNumberFormatter = {
+        let formatter = NSNumberFormatter()
+        formatter.groupingSeparator = ","
+        formatter.currencyCode = " €"
+        formatter.numberStyle = .DecimalStyle
+        return formatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +51,15 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
     
     func updateTitle () {
         if let firstTransactionCategory = transactionsCategorizedArr.first {
+
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "MMMM '‘' yy"
             if let transaction = firstTransactionCategory.1.first {
-                self.title = dateFormatter.stringFromDate(transaction.date!);
+                if let date = transaction.date {
+                    self.title = dateFormatter.stringFromDate(date);
+                } else {
+                    self.title = ""
+                }
             }
         } else {
             self.title = "";
@@ -163,6 +175,11 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let transaction = self.transactionsCategorizedArr[indexPath.section].1[indexPath.row]
         if let transactionCell = cell as? TransactionTableViewCell {
+
+            var commentDescription = transaction.comment as? String
+            if commentDescription == nil {
+                commentDescription = ""
+            }
             
             var transactionDescription = transaction.descriptionText as? String
             if transactionDescription == nil {
@@ -176,12 +193,13 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
                 cardDescription = " (" + cardDescription! + ")"
             }
             
-            transactionCell.recepientLabel?.text = transactionDescription! + cardDescription!
+            transactionCell.titleLabel?.text = commentDescription
+            transactionCell.detailTextLabel?.text = transactionDescription
             
 //            print ("date: \(transaction.date)")
             
             if let amount = transaction.amount {
-                transactionCell.amountLabel?.text = amount.stringValue
+                transactionCell.amountLabel?.text = formatterWithSepator.stringFromNumber(amount)
             }
         }
     }
@@ -210,11 +228,16 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
         }
     }
     
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100.0
+    }
+    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("Month Category")
         configureSection(cell!, atSection: section)
         return cell
     }
+
     
     
     
@@ -226,7 +249,8 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
     
     func configureDCPathButton() {
         
-        dcPathButton = DCPathButton(centerImage: UIImage(named: "chooser-button-tab"), highlightedImage: UIImage(named: "chooser-button-tab-highlighted"))
+//        dcPathButton = DCPathButton(centerImage: UIImage(named: "chooser-button-tab"), highlightedImage: UIImage(named: "chooser-button-tab-highlighted"))
+        dcPathButton = DCPathButton(centerImage: UIImage(named: "bottomMenuButtonBackground"), highlightedImage: UIImage(named: "bottomMenuButtonHihglightedBackground"))
         
         dcPathButton.delegate = self
         dcPathButton.dcButtonCenter = CGPointMake(self.view.bounds.width/2, self.view.bounds.height - 80)
@@ -254,5 +278,4 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
         alertView.show()
         
     }
-
 }
