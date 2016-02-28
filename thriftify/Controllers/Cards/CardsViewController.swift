@@ -53,8 +53,8 @@ class CardsViewController: UIViewController, UICollectionViewDataSource {
         let card = cards[indexPath.row]
         if let cardCell = cell as? CardViewCell {
             
-            if let cnumber = card.number {
-                cardCell.number.text = prepareCardNumber(cnumber)
+            if let _ = card.number {
+                cardCell.number.text = card.strarredNumber
             }
 
             if let cholder = card.cardholder {
@@ -62,10 +62,4 @@ class CardsViewController: UIViewController, UICollectionViewDataSource {
             }
         }
     }
-    
-    func prepareCardNumber (number: NSNumber) -> String {
-        let cnumber = String(number)
-        return "\((cnumber as NSString).substringToIndex(4)) **** **** \((cnumber as NSString).substringFromIndex(12))"
-    }
-
 }
