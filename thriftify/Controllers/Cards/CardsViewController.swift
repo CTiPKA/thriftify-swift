@@ -65,7 +65,8 @@ class CardsViewController: UIViewController, UICollectionViewDataSource {
     
     func prepareCardNumber (number: NSNumber) -> String {
         let cnumber = String(number)
-        return "\((cnumber as NSString).substringToIndex(4)) **** **** \((cnumber as NSString).substringFromIndex(12))"
+        let result = (cnumber.characters.count == 16) ? "\((cnumber as NSString).substringToIndex(4)) **** **** \((cnumber as NSString).substringFromIndex(12))" : "Wrong card number"
+        return result
     }
 
 }
