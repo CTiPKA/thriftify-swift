@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Merel Light.otf">
+            <string>Merel-Light</string>
+        </mutableArray>
+        <mutableArray key="Merel Medium.otf">
+            <string>Merel-Medium</string>
+        </mutableArray>
+        <mutableArray key="Merel.otf">
+            <string>Merel-Regular</string>
+            <string>Merel-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="thriftify" customModuleProvider="target">
+            <connections>
+                <outlet property="cardholder" destination="5Zj-Yc-ggt" id="Svm-er-WQp"/>
+                <outlet property="logo" destination="DXW-Zf-PFR" id="dbw-GZ-hjS"/>
+                <outlet property="number" destination="IYF-nB-Gn5" id="ldl-gi-eBO"/>
+                <outlet property="type" destination="0AU-nm-few" id="Q0X-BM-4St"/>
+                <outlet property="typeLogo" destination="Iy0-pB-tq9" id="ghL-q5-BOt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigCard" translatesAutoresizingMaskIntoConstraints="NO" id="sJU-fZ-S44">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVa-X0-ahE" customClass="RoundRectView" customModule="thriftify" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aBN" translatesAutoresizingMaskIntoConstraints="NO" id="DXW-Zf-PFR">
+                            <rect key="frame" x="15" y="15" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DXW-Zf-PFR" secondAttribute="height" multiplier="1:1" id="pF2-Wf-wPD"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20132" textAlignment="right" lineBreakMode="clip" numberOfLines="0" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpm-LS-yaE">
+                            <rect key="frame" x="185" y="15" width="70" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hpm-LS-yaE" secondAttribute="height" multiplier="87:16" id="0TJ-Ii-9vS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Merel-Regular" family="Merel-Regular" pointSize="22"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="0TJ-Ii-9vS"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitmap" translatesAutoresizingMaskIntoConstraints="NO" id="Iy0-pB-tq9">
+                            <rect key="frame" x="204" y="127" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Iy0-pB-tq9" secondAttribute="height" multiplier="3:2" id="cj0-VL-sks"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My main credit card" lineBreakMode="clip" numberOfLines="0" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Zj-Yc-ggt">
+                            <rect key="frame" x="15" y="125" width="181" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="5Zj-Yc-ggt" secondAttribute="height" multiplier="181:15" constant="-36.199999999999989" id="3Da-0R-Okb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Merel-Medium" family="Merel-Medium" pointSize="16"/>
+                            <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit card" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="0AU-nm-few">
+                            <rect key="frame" x="15" y="146" width="181" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="0AU-nm-few" secondAttribute="height" multiplier="181:12" constant="-60.333333333333343" id="zAR-Z3-prS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Merel-Light" family="Merel-Light" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8669 ****  **** 6523" textAlignment="justified" lineBreakMode="clip" numberOfLines="0" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="IYF-nB-Gn5">
+                            <rect key="frame" x="15" y="76" width="255" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="IYF-nB-Gn5" secondAttribute="height" multiplier="83:7" constant="2.0714285714285552" id="WAS-Qf-eK3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Merel-Regular" family="Merel-Regular" pointSize="29"/>
+                            <color key="textColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="WAS-Qf-eK3"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="height" secondItem="FVa-X0-ahE" secondAttribute="height" multiplier="0.16" id="0fA-GX-jgX"/>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="width" secondItem="FVa-X0-ahE" secondAttribute="width" multiplier="0.9" id="44a-UN-Wk6"/>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="leading" secondItem="DXW-Zf-PFR" secondAttribute="leading" id="BSO-2w-oMB"/>
+                        <constraint firstItem="5Zj-Yc-ggt" firstAttribute="leading" secondItem="FVa-X0-ahE" secondAttribute="leading" constant="15" id="DPu-cH-cUm"/>
+                        <constraint firstAttribute="centerY" secondItem="5Zj-Yc-ggt" secondAttribute="bottom" multiplier="0.64" constant="-1.519999999999996" identifier="1" id="ICo-NV-3So"/>
+                        <constraint firstItem="Iy0-pB-tq9" firstAttribute="width" secondItem="FVa-X0-ahE" secondAttribute="height" multiplier="1:3" id="J2q-xA-caa"/>
+                        <constraint firstItem="DXW-Zf-PFR" firstAttribute="leading" secondItem="FVa-X0-ahE" secondAttribute="centerX" multiplier="0.11" id="JzZ-1a-OVd"/>
+                        <constraint firstItem="hpm-LS-yaE" firstAttribute="top" secondItem="DXW-Zf-PFR" secondAttribute="top" id="KT0-ky-abU"/>
+                        <constraint firstAttribute="width" secondItem="FVa-X0-ahE" secondAttribute="height" multiplier="14:9" id="NaN-Ph-GRt"/>
+                        <constraint firstItem="DXW-Zf-PFR" firstAttribute="top" secondItem="FVa-X0-ahE" secondAttribute="centerY" multiplier="0.17" id="OOs-4h-TE6"/>
+                        <constraint firstAttribute="centerY" secondItem="0AU-nm-few" secondAttribute="bottom" multiplier="0.57" constant="-2.3399999999999892" id="PNB-gq-K1c"/>
+                        <constraint firstAttribute="trailing" secondItem="IYF-nB-Gn5" secondAttribute="trailing" constant="10" id="SL4-jx-CZC"/>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="top" secondItem="FVa-X0-ahE" secondAttribute="centerY" multiplier="0.85" id="TAR-Bb-TBc"/>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="width" secondItem="FVa-X0-ahE" secondAttribute="height" multiplier="17:12" id="XJW-lm-qyB"/>
+                        <constraint firstItem="5Zj-Yc-ggt" firstAttribute="leading" secondItem="DXW-Zf-PFR" secondAttribute="leading" id="YMo-rO-y3x"/>
+                        <constraint firstItem="Iy0-pB-tq9" firstAttribute="leading" secondItem="5Zj-Yc-ggt" secondAttribute="trailing" constant="8" id="a4f-zG-cvR"/>
+                        <constraint firstItem="0AU-nm-few" firstAttribute="leading" secondItem="FVa-X0-ahE" secondAttribute="leading" constant="15" id="aDs-X4-iEu"/>
+                        <constraint firstItem="hpm-LS-yaE" firstAttribute="width" secondItem="FVa-X0-ahE" secondAttribute="height" multiplier="29:30" id="b38-9R-zzk"/>
+                        <constraint firstItem="DXW-Zf-PFR" firstAttribute="top" secondItem="hpm-LS-yaE" secondAttribute="top" id="bDx-8i-FSd"/>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="leading" secondItem="FVa-X0-ahE" secondAttribute="leading" constant="13" id="cDE-kR-wUD"/>
+                        <constraint firstAttribute="centerX" secondItem="hpm-LS-yaE" secondAttribute="trailing" multiplier="0.55" id="iGF-5F-Nh6"/>
+                        <constraint firstItem="0AU-nm-few" firstAttribute="leading" secondItem="DXW-Zf-PFR" secondAttribute="leading" id="iZV-9M-VjR"/>
+                        <constraint firstItem="IYF-nB-Gn5" firstAttribute="centerY" secondItem="FVa-X0-ahE" secondAttribute="centerY" id="jbq-d8-Q63"/>
+                        <constraint firstAttribute="bottom" secondItem="Iy0-pB-tq9" secondAttribute="bottom" constant="13" id="k2P-2U-QiS"/>
+                        <constraint firstItem="DXW-Zf-PFR" firstAttribute="width" secondItem="FVa-X0-ahE" secondAttribute="height" multiplier="5:18" id="kmv-QO-9FJ"/>
+                        <constraint firstItem="hpm-LS-yaE" firstAttribute="height" secondItem="DXW-Zf-PFR" secondAttribute="height" multiplier="0.45" constant="7.5" id="qb6-12-agi"/>
+                        <constraint firstItem="Iy0-pB-tq9" firstAttribute="leading" secondItem="0AU-nm-few" secondAttribute="trailing" constant="8" id="qv5-xY-nUS"/>
+                        <constraint firstAttribute="trailing" secondItem="Iy0-pB-tq9" secondAttribute="trailing" constant="16" id="vvO-K6-P5P"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="11"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="deviceRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bDx-8i-FSd"/>
+                            <exclude reference="44a-UN-Wk6"/>
+                            <exclude reference="TAR-Bb-TBc"/>
+                            <exclude reference="XJW-lm-qyB"/>
+                            <exclude reference="cDE-kR-wUD"/>
+                            <exclude reference="DPu-cH-cUm"/>
+                            <exclude reference="aDs-X4-iEu"/>
+                            <exclude reference="b38-9R-zzk"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FVa-X0-ahE" secondAttribute="bottom" id="81U-oa-aJa"/>
+                <constraint firstAttribute="trailing" secondItem="FVa-X0-ahE" secondAttribute="trailing" id="BE3-qg-F45"/>
+                <constraint firstItem="FVa-X0-ahE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BVN-4v-XR7"/>
+                <constraint firstAttribute="trailing" secondItem="sJU-fZ-S44" secondAttribute="trailing" id="Brc-Q9-Tvf"/>
+                <constraint firstAttribute="trailing" secondItem="sJU-fZ-S44" secondAttribute="trailing" id="GGi-lo-hYE"/>
+                <constraint firstItem="FVa-X0-ahE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IsQ-RR-BPp"/>
+                <constraint firstItem="sJU-fZ-S44" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J2t-4G-AF7"/>
+                <constraint firstItem="sJU-fZ-S44" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qox-Y1-yBi"/>
+                <constraint firstItem="sJU-fZ-S44" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eej-OV-TKQ"/>
+                <constraint firstItem="sJU-fZ-S44" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iSH-3b-sun"/>
+                <constraint firstAttribute="bottom" secondItem="sJU-fZ-S44" secondAttribute="bottom" id="pdY-Sj-4UM"/>
+                <constraint firstAttribute="bottom" secondItem="sJU-fZ-S44" secondAttribute="bottom" id="ua6-nq-lVV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="249" y="188"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="aBN" width="27" height="26"/>
+        <image name="bigCard" width="439" height="293"/>
+        <image name="bitmap" width="17" height="11"/>
+    </resources>
+</document>
