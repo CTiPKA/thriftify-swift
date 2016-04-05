@@ -12,7 +12,7 @@ class MyMenuTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
-    let rowIcons = ["ic_avatar", "ic_transactions", "ic_shape", "ic_settings", "ic_logout"]
+    let rowIcons = ["ic_avatar", "ic_transactions", "ic_shape"] //, "ic_settings", "ic_logout"]
     
     var userProfileItem : UIViewController?
     var transactionsItem : UIViewController?
@@ -102,18 +102,6 @@ class MyMenuTableViewController: UIViewController, UITableViewDataSource, UITabl
             }
             destViewController = accountsItem!
             break
-        case 3:
-            if settingsItem == nil {
-                settingsItem = mainStoryboard.instantiateViewControllerWithIdentifier("SettingsTab Placeholder")
-            }
-            destViewController = settingsItem!
-            break
-        case 4:
-                if settingsItem == nil {
-                    settingsItem = mainStoryboard.instantiateViewControllerWithIdentifier("SettingsTab Placeholder")
-                }
-                destViewController = settingsItem!
-            break
         default:
             if settingsItem == nil {
                 settingsItem = mainStoryboard.instantiateViewControllerWithIdentifier("SettingsTab Placeholder")
@@ -134,5 +122,20 @@ class MyMenuTableViewController: UIViewController, UITableViewDataSource, UITabl
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - User Actions
+    @IBAction func pressedSettingsButton(sender: UIButton) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Menu",bundle: nil)
+        if settingsItem == nil {
+            settingsItem = mainStoryboard.instantiateViewControllerWithIdentifier("SettingsTab Placeholder")
+        }
+        
+        sideMenuController()?.setContentViewController(settingsItem!)
+    }
+    
+    @IBAction func pressedLogoutButton(sender: UIButton) {
+        //logout actions
+    }
+    
 
 }

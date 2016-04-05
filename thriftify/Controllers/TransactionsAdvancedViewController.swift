@@ -253,7 +253,7 @@ class TransactionsAdvancedViewController: UIViewController, UITableViewDataSourc
         dcPathButton = DCPathButton(centerImage: UIImage(named: "bottomMenuButtonBackground"), highlightedImage: UIImage(named: "bottomMenuButtonHihglightedBackground"))
         
         dcPathButton.delegate = self
-        dcPathButton.dcButtonCenter = CGPointMake(self.view.bounds.width/2, self.view.bounds.height - 80)
+        dcPathButton.dcButtonCenter = CGPointMake(self.view.bounds.width/2, self.view.bounds.height - 40)
         dcPathButton.allowSounds = true
         dcPathButton.allowCenterButtonRotation = true
         dcPathButton.bloomRadius = 80
